@@ -17,13 +17,13 @@
 
     <nav id="menu">
         <ul>
-            <li>Hébergements</li>
-            <li>Activités</li>
+            <a href="#hebergements"><li>Hébergements</li></a>
+            <a href="#activites"><li>Activités</li></a>
         </ul>
     </nav>
 
     <div id="inscription">
-        <p>S'inscrire</p>
+        <a href="#inscription"><p>S'inscrire</p></a>
     </div>
 
 </header>
@@ -32,7 +32,7 @@
     <!--Première section avec le slogan, la barre de recherche, les filtre et le nombre de réasutats-->
     <div id="slogan">
         <h1>Trouvez votre hébergement pour des vacances de rêves</h1>
-        <p>E plein centre ville ou en pleine nature</p>
+        <p>En plein centre ville ou en pleine nature</p>
     </div>
 
     <form id="barreRecherche">
@@ -44,18 +44,14 @@
 
     <div id="filtres">
         <h3>Filtres</h3>
-        <div class="boutonFiltre">       
-            <p class="texteFiltre"><img src="" alt="" class="logoFiltre">Économique</p>
-        </div>
-        <div class="boutonFiltre">       
-            <p class="texteFiltre"><img src="" alt="" class="logoFiltre">Familial</p>
-        </div>
-        <div class="boutonFiltre">       
-            <p class="texteFiltre"><img src="" alt="" class="logoFiltre">Romantique</p>
-        </div>
-        <div class="boutonFiltre">       
-            <p class="texteFiltre"><img src="" alt="" class="logoFiltre">Animaux autorisés</p>
-        </div>
+        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="economique"> <label
+            for="economique"><img src="" alt="" class="logoFiltre">Économique</label>
+        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="familial"> <label
+            for="economique"><img src="" alt="" class="logoFiltre">Familial</label>
+        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="romantique"> <label
+            for="economique"><img src="" alt="" class="logoFiltre">Romatique</label>
+        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="animaux"> <label
+            for="economique"><img src="" alt="" class="logoFiltre">Animaux Autorisés</label>
     </div>
 
     <div id="nbResultats">
@@ -68,41 +64,48 @@
     <article id="hebergPrincipal">
         <h2>Hébergements à Marseille</h2>
         <div id="listeHebergPrincipal">
-            <div class="vignetteHeberg">
-                <p class="vignetteHebergImage"><img src="" alt=""></p>
-                <div class="vignetteHebergLegende">
-                    <h4>Auberge la Cannebière</h4>
-                    <p>Nuit à partir de <strong>25€</strong></p>
-                    <img src="" alt="" class="vignetteHebergNote">
+            <a href="#listeHebergPrincipal">
+                <div class="vignetteHeberg">
+                    <p class="vignetteHebergImage"><img src="" alt=""></p>
+                    <div class="vignetteHebergLegende">
+                        <h4>Auberge la Cannebière</h4>
+                        <p>Nuit à partir de <strong>25€</strong></p>
+                        <img src="" alt="" class="vignetteHebergNote">
+                    </div>
                 </div>
-            </div>
+            </a>
             <!-- faire x6-->
         </div>
-         <h3>Afficher plus</h3>
+        <h3>Afficher plus</h3>
     </article>
 
     <aside id="hebergPop">
         <h2>Les plus populaires</h2>
         <img src="" alt="" id="logoHebergPop">
         <div id="listeHebergPop">
-            <div class="vignetteHeberg">
-                <p class="vignetteHebergImage"><img src="" alt=""></p>
-                <div class="vignetteHebergLegende">
-                    <h4>Hotel le soleil du matin</h4>
-                    <p>Nuit à partir de 128<strong>€</strong></p>
-                    <img src="" alt="" class="vignetteHebergNote">
+            <a href="#listeHebergPop">
+                <div class="vignetteHeberg">
+                    <p class="vignetteHebergImage"><img src="" alt=""></p>
+                    <div class="vignetteHebergLegende">
+                        <h4>Hotel le soleil du matin</h4>
+                        <p>Nuit à partir de 128<strong>€</strong></p>
+                        <img src="" alt="" class="vignetteHebergNote">
+                    </div>
                 </div>
-            </div>
+            </a>
+        </div>
     </aside>
 </section>
 
 <section id="activites">
     <!--troisième section avec la présentation des activités"-->
     <div class="listeActi">
-        <div class="vignetteActi">
-            <p class="vignetteActiImage"><img src="" alt=""></p>
-            <h4 class="vignetteHebergLegende">Vieux port</h4>
-        </div>
+        <a href="#activites">
+            <div class="vignetteActi">
+                <p class="vignetteActiImage"><img src="" alt=""></p>
+                <h4 class="vignetteHebergLegende">Vieux port</h4>
+            </div>
+        </a>
         <!--faire *6-->
     </div>
 </section>
@@ -112,25 +115,25 @@
     <div id "aPropos">
         <h3>A propos</h3>
         <ul>
-            <li>Fonctionnement du site</li>
-            <li>Conditions générales de vente</li>
-            <li>Données et confidentialité</li>
+            <a href="#aPropos"><li>Fonctionnement du site</li></a>
+            <a href="#aPropos"><li>Conditions générales de vente</li></a>
+            <a href="#aPropos"><li>Données et confidentialité</li></a>
         </ul>
     </div>
 
     <div id "nosHeberg">
         <h3>Nos hébergements</h3>
         <ul>
-            <li>Charte qualité</li>
-            <li>Soumettre votre hotêl</Li>
+            <a href="#nosHeberg"><li>Charte qualité</li></a>
+            <a href="#nosHeberg"><li>Soumettre votre hotêl</li></a>
         </ul>
     </div>
 
     <div id "asistance">
         <h3>Assistance</h3>
         <ul>
-            <li>Centre d'aide</li>
-            <li>Nous contacter</li>
+            <a href="#assistance"><li>Centre d'aide</li></a>
+            <a href="#assistance"><li>Nous contacter</li></a>
         </ul>
     </div>
 </footer>
