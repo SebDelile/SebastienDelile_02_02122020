@@ -1,0 +1,45 @@
+#logoSite img{
+    width: 200px;
+}
+
+#logoLocaliser{
+   width: 30px;
+   height: 30px; 
+}
+
+#logoRecherche{
+    width: 30px;
+    height: 30px; 
+ }
+
+.logoFiltre{
+    width: 30px;
+    height: 30px; 
+ }
+
+
+#nbResultats img{
+    width: 30px;
+    height: 30px; 
+ }
+
+
+ .vignetteHeberg__Note img {
+    width: 10px;
+    height: 10px; 
+ }
+
+ .vignetteHeberg__Image {
+    width: 300px; 
+ }
+
+ .vignetteActi__Image {
+    width: 300px; 
+ }
+
+ a{
+     text-decoration: none;
+ }
+
+
+ /*{border: 1px solid black}

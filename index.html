@@ -4,15 +4,17 @@
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css">
-	<title>Reservia - Trouvez votre hébergement pour des vacances de rêve</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <title>Reservia - Trouvez votre hébergement pour des vacances de rêve</title>
+ 
 </head>
 
 <body>
-<header>
+<header id="header">
     <!--header, contient le logo, le menu et le lien pour s'inscrire-->
     <!--Reste affiché en permanence-->
-    <div id="logo">
-
+    <div id="logoSite">
+        <img src="images/Reservia@3x.png" alt="logo Reservia">
     </div>
 
     <nav id="menu">
@@ -35,27 +37,28 @@
         <p>En plein centre ville ou en pleine nature</p>
     </div>
 
-    <form id="barreRecherche">
+    <div id="barreRecherche">
         <!--logo "me localiser, champ de saisie et bouton "rechercher"-->
-        <input type="image" src="">
+        <input type="image" id="logoLocaliser" src="images/icones/map-marker-alt-solid.svg">
         <input type="text" value = "Marseille, France">
         <input type="submit" value="Rechercher">
-    </form>
+        <input type="image" id="logoRecherche" src="images/icones/search-solid.svg">
+    </div>
 
     <div id="filtres">
         <h3>Filtres</h3>
         <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="economique"> <label
-            for="economique"><img src="" alt="" class="logoFiltre">Économique</label>
+            for="economique"><img src="images/icones/money-bill-wave-solid.svg" alt="Logo Economique" class="logoFiltre">Économique</label>
         <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="familial"> <label
-            for="economique"><img src="" alt="" class="logoFiltre">Familial</label>
+            for="familial"><img src="images/icones/child-solid.svg" alt="Logo familial" class="logoFiltre">Familial</label>
         <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="romantique"> <label
-            for="economique"><img src="" alt="" class="logoFiltre">Romatique</label>
+            for="romantique"><img src="images/icones/heart-solid.svg" alt="Logo Romatique" class="logoFiltre">Romatique</label>
         <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="animaux"> <label
-            for="economique"><img src="" alt="" class="logoFiltre">Animaux Autorisés</label>
+            for="animaux"><img src="images/icones/dog-solid.svg" alt="Logo animaux" class="logoFiltre">Animaux Autorisés</label>
     </div>
 
     <div id="nbResultats">
-        <p><img src="" alt="">Plus de 500 logements sont disponibles dans cette ville</p>
+        <p><img src="images/icones/info-solid.svg" alt="">Plus de 500 logements sont disponibles dans cette ville</p>
     </div>
 </section>
 
@@ -66,11 +69,17 @@
         <div id="listeHebergPrincipal">
             <a href="#listeHebergPrincipal">
                 <div class="vignetteHeberg">
-                    <p class="vignetteHebergImage"><img src="" alt=""></p>
-                    <div class="vignetteHebergLegende">
+                    <img src="images/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="" class="vignetteHeberg__Image">
+                    <div class="vignetteHeberg__Legende">
                         <h4>Auberge la Cannebière</h4>
                         <p>Nuit à partir de <strong>25€</strong></p>
-                        <img src="" alt="" class="vignetteHebergNote">
+                        <div class="vignetteHeberg__Note">
+                            <img src="images/icones/star-solid.svg">
+                            <img src="images/icones/star-solid.svg">
+                            <img src="images/icones/star-solid.svg">
+                            <img src="images/icones/star-solid.svg">
+                            <img src="images/icones/star-solid-alt.svg" alt="Note">
+                        </div>
                     </div>
                 </div>
             </a>
@@ -85,11 +94,11 @@
         <div id="listeHebergPop">
             <a href="#listeHebergPop">
                 <div class="vignetteHeberg">
-                    <p class="vignetteHebergImage"><img src="" alt=""></p>
-                    <div class="vignetteHebergLegende">
+                    <img src="images/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="" class="vignetteHeberg__Image">
+                    <div class="vignetteHeberg__Legende">
                         <h4>Hotel le soleil du matin</h4>
                         <p>Nuit à partir de 128<strong>€</strong></p>
-                        <img src="" alt="" class="vignetteHebergNote">
+                        <img src="" alt="" class="vignetteHeberg__Note">
                     </div>
                 </div>
             </a>
@@ -102,8 +111,8 @@
     <div class="listeActi">
         <a href="#activites">
             <div class="vignetteActi">
-                <p class="vignetteActiImage"><img src="" alt=""></p>
-                <h4 class="vignetteHebergLegende">Vieux port</h4>
+                <img class="vignetteActi__Image" src="images/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="">
+                <h4 class="vignetteHeberg__Legende">Vieux port</h4>
             </div>
         </a>
         <!--faire *6-->
@@ -138,6 +147,8 @@
     </div>
 </footer>
 
-
 </body>
+
+<!--Credits-->
+<!--icons are from fontawesome.com, colors may have been changed-->
 </html>
