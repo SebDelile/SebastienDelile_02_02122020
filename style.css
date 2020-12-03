@@ -1,6 +1,7 @@
-/*--------------------------------------*/
+/*----------------------*/
 /* Propriétés générales */
-/*--------------------------------------*/
+/*----------------------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap');
 
 * {
@@ -19,17 +20,30 @@ body {
    margin: auto;
 }
 
+h1 {
+   font-size: 13px;
+   font-weight: 700;
+}
+
 h3{
    font-size: 12px;
    font-weight: 700;
    padding: 5px 0 5px 0;
 }
 
+
+
+
+
+p {
+   font-size: 10px;
+
+}
+
 li {
    font-size: 11px;
    padding: 5px 0 5px 0;
 }
-
 
 /*--------------------------------------*/
 /* Propriété des éléments dans le header*/
@@ -84,38 +98,148 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 }
 
 
+/*-------------------------------------------------*/
+/* Propriété des éléments dans la section recherche*/
+/*-------------------------------------------------*/
 
 
+#recherche {
+   padding: 0 30px;
+   white-space: nowrap;
+}
 
+#slogan {
+   padding-bottom : 20px;
+}
 
-
-
-
-
-
-
+#barreRecherche {
+   height: 45px; 
+   display: flex;
+   align-items: center;
+   width: 350px;
+}
 
 
 #logoLocaliser{
-   width: 30px;
-   height: 30px; 
+   width: 45px;
+   height: 45px;
+   padding: 15px;
+   background-color: #F2F2F2;
+   border: 1px #F2F2F2 solid;
+   border-radius: 10px 0 0 10px;
+}
+
+#inputRecherche {
+   height : 45px;
+   width : 200px; 
+   padding : 15px;
+   font-size: 15px;
+   font-weight: 700;
+   border: 1px #F2F2F2 solid; 
+   overflow: hidden;
+}
+
+#submitRecherche {
+   padding: 0 15px;
+   background-color: #0065FC;
+   color: white;
+   font-size: 15px;
+   font-weight: 700;
+   border: 1px #0065FC solid;
+   border-radius: 0 10px 10px 0;
+   overflow: hidden;
+   height: 45px;
+   cursor: pointer;
 }
 
 #logoRecherche{
-    width: 30px;
-    height: 30px; 
+   display: none; /*ne sert que pour la version mobile*/
+   width: 20px;
+   height: 20px; 
  }
 
-.logoFiltre{
-    width: 30px;
-    height: 30px; 
+#filtres{
+   padding: 20px 0;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   
+}
+
+
+.boutonFiltre {
+   display: none; /*On cache la case de la radio*/
+}
+
+.boutonFiltre + label {
+   display: flex;
+   height: 45px;
+   Margin-left: 30px;
+   align-items: center;
+   border : 2px #F2F2F2 solid;
+   border-radius: 22.5px;
+   font-size: 15px;
+   font-weight: 700;
+   padding-right: 15px;
+   white-space: nowrap ;
+}
+
+.logoFiltre {
+   height: 45px;
+   width: 45px;
+   min-width: 45px; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
+   border-radius: 22.5px;
+   background-color: #deebff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 15px;
+   margin-left: -2px;
+}
+
+
+.logoFiltre img {
+   width: 20px;
+   height: 20px;
+   margin: auto;
  }
 
+
+#nbResultats {
+   padding:  0 0 20px 0;
+   display: flex;
+   align-items: center;
+   white-space: nowrap;
+}
+
+#nbResultats div {
+   min-width: 20px; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
+   width: 20px;
+   height: 20px;
+   border: 1px #F2F2F2 solid;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 10px;
+}
 
 #nbResultats img{
-    width: 30px;
-    height: 30px; 
+   width: 10px;
+   height: 10px;
  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  .vignetteHeberg__Note img {

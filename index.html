@@ -37,25 +37,37 @@
     <div id="barreRecherche">
         <!--logo "me localiser, champ de saisie et bouton "rechercher"-->
         <input type="image" id="logoLocaliser" src="images/icones/map-marker-alt-solid.svg">
-        <input type="text" value = "Marseille, France">
-        <input type="submit" value="Rechercher">
+        <input type="text" id="inputRecherche" value = "Marseille, France">
+        <input type="submit" id="submitRecherche" value="Rechercher">
         <input type="image" id="logoRecherche" src="images/icones/search-solid.svg">
     </div>
 
     <div id="filtres">
         <h3>Filtres</h3>
-        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="economique"> <label
-            for="economique"><img src="images/icones/money-bill-wave-solid.svg" alt="Logo Economique" class="logoFiltre">Économique</label>
-        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="familial"> <label
-            for="familial"><img src="images/icones/child-solid.svg" alt="Logo familial" class="logoFiltre">Familial</label>
-        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="romantique"> <label
-            for="romantique"><img src="images/icones/heart-solid.svg" alt="Logo Romatique" class="logoFiltre">Romatique</label>
-        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="animaux"> <label
-            for="animaux"><img src="images/icones/dog-solid.svg" alt="Logo animaux" class="logoFiltre">Animaux Autorisés</label>
+        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="economique">
+        <label for="economique">
+            <div class="logoFiltre"><img src="images/icones/money-bill-wave-solid.svg" alt="Logo Economique"></div>
+            Économique
+        </label>
+        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="familial">
+        <label for="familial">
+            <div class="logoFiltre"><img src="images/icones/child-solid.svg" alt="Logo familial"></div>
+            Familial
+        </label>
+        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="romantique">
+        <label for="romantique">
+            <div class="logoFiltre"><img src="images/icones/heart-solid.svg" alt="Logo Romatique"></div>
+            Romatique
+        </label>
+        <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="animaux">
+        <label for="animaux">
+            <div class="logoFiltre"><img src="images/icones/dog-solid.svg" alt="Logo animaux"></div>
+            Animaux Autorisés
+        </label>
     </div>
 
     <div id="nbResultats">
-        <p><img src="images/icones/info-solid.svg" alt="">Plus de 500 logements sont disponibles dans cette ville</p>
+        <div><img src="images/icones/info-solid.svg" alt=""></div><p>Plus de 500 logements sont disponibles dans cette ville</p>
     </div>
 </section>
 
