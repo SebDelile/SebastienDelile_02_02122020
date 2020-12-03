@@ -1,5 +1,7 @@
+/*--------------------------------------*/
 /* Propriétés générales */
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/*--------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap');
 
 * {
    font-family: 'Raleway', sans-serif;
@@ -13,15 +15,28 @@ a {
 }
 
 body {
-   width : 90%;
+   width : fill;
    margin: auto;
 }
 
+h3{
+   font-size: 12px;
+   font-weight: 700;
+   padding: 5px 0 5px 0;
+}
+
+li {
+   font-size: 11px;
+   padding: 5px 0 5px 0;
+}
 
 
+/*--------------------------------------*/
 /* Propriété des éléments dans le header*/
+/*--------------------------------------*/
 
 #header {
+   padding: 0 30px;
    display: flex;
    justify-content: space-between;
    height: 130px;
@@ -44,7 +59,7 @@ body {
 cliquable sur la totalité de la surface et que le texte soit centré à l'intérieur*/
 
 #menu a{
-   width: 160px;
+   padding: 0 30px;
    height: 130px;
    display: flex;
    justify-content: center;
@@ -62,7 +77,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 160px;
+   padding: 0 30px;
    height: 130px;
    color: #0065FC;
    font-weight: bold;
@@ -117,6 +132,32 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
  }
 
 
+
+/*--------------------------------------*/
+/* Propriété des éléments dans le footer*/
+/*--------------------------------------*/
+
+footer {
+   padding: 30px 30px 50px 30px;
+   background-color: #F2F2F2;
+   display: flex;
+   justify-content: flex-start;
+}
+
+footer div {
+   padding: 0 200px 0 0;
+   list-style: none;
+}
+
+footer div a {
+   color: black;
+}
+
+
+
+footer div ul{
+   list-style: none;
+}
 
 
  /*{border: 1px solid black}
