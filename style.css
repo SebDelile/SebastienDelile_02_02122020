@@ -264,6 +264,9 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    align-content: flex-start;
 }
 
+/*Les balises <a> sont passées en block flex avec taille fixée pour que le lien soit
+cliquable sur la totalité de la surface et que le texte soit centré à l'intérieur*/
+
 .vignetteHeberg { /*conteneur de la carte*/
    border: 3px white solid;
    border-radius: 1.1vw;
@@ -332,9 +335,7 @@ footer {
    justify-content: flex-start;
 }
 
-footer div {
-   list-style: none;
-}
+
 
 footer div:nth-child(1) {
    padding-right: 15.6vw;
@@ -348,11 +349,6 @@ footer div a {
    color: black;
 }
 
-
-
 footer div ul{
    list-style: none;
 }
-
-
- /*{border: 1px solid black}
