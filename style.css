@@ -20,7 +20,7 @@ body {
    margin: auto;
 }
 
-h1 {
+h1, h2 {
    font-size: 13px;
    font-weight: 700;
 }
@@ -32,7 +32,10 @@ h3{
 }
 
 
-
+h4 {
+   font-size: 10px;
+   font-weight: 700;
+}
 
 
 p {
@@ -233,23 +236,79 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 
 
+/*----------------------------------------------------*/
+/* Propriété des éléments dans la section hébergements*/
+/*----------------------------------------------------*/
 
+#hebergPrincipal {
+   margin: 0 15px 0 30px;
+   background-color: #F2F2F2;
+   border-radius: 15px;
+   max-width: 60%;
+   padding: 10px 0;
+}
 
+#listeHebergPrincipal, #hebergPrincipal h2, #hebergPrincipal h3{
+   padding: 10px 4.5%;
+}
 
+#listeHebergPrincipal {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   align-content: flex-start;
+}
 
+.vignetteHeberg { /*conteneur de la carte*/
+   border: 3px white solid;
+   border-radius: 10px;
+   background-color: white;
+   overflow: hidden;
+   width: 140px;
+   height: 150px;
+}
 
+.vignetteHeberg__Image {
+   width: 100%;
+   height: 66%;
+   object-fit: cover;
+}
 
+.vignetteHeberg__Legende { /*conteneur de la légende de la carte*/
+   width: 100%;
+   height: 34%;
+   padding: 0 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
 
+.vignetteHeberg__Legende p {
+ font-size: 9px;
+}
 
+.vignetteHeberg__Note { /*l'ensemble des 5 images étoiles*/
 
- .vignetteHeberg__Note img {
+}
+
+.vignetteHeberg__Note img {
     width: 10px;
     height: 10px; 
  }
 
- .vignetteHeberg__Image {
-    width: 300px; 
- }
+
+
+
+
+
+
+
+
+
+
+
+
 
  .vignetteActi__Image {
     width: 300px; 
