@@ -53,10 +53,10 @@ li {
 /*--------------------------------------*/
 
 #header {
-   padding: 0 30px;
+   padding: 0 3.5vw;
    display: flex;
    justify-content: space-between;
-   height: 130px;
+   height: 8.5vw;
    align-items: center;
 }
 
@@ -65,7 +65,7 @@ li {
 }
 
 #logoSite img{
-   width: 100px;
+   width: 100px; /*laissé fixe*/
 }
 
 #menu{
@@ -76,8 +76,8 @@ li {
 cliquable sur la totalité de la surface et que le texte soit centré à l'intérieur*/
 
 #menu a{
-   padding: 0 30px;
-   height: 130px;
+   width: 11vw;
+   height: 8.5vw;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -94,8 +94,8 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 0 30px;
-   height: 130px;
+   width: 7.5vw;
+   height: 8.5vw;
    color: #0065FC;
    font-weight: bold;
 }
@@ -107,51 +107,51 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 
 #recherche {
-   padding: 0 30px;
+   padding: 0 3.5vw;
    white-space: nowrap;
 }
 
 #slogan {
-   padding-bottom : 20px;
+   padding-bottom : 1.7vW;
 }
 
 #barreRecherche {
-   height: 45px; 
+   height: 3.5vw; 
    display: flex;
    align-items: center;
-   width: 350px;
+   width: 29vw;
 }
 
 
 #logoLocaliser{
-   width: 45px;
-   height: 45px;
-   padding: 15px;
+   width: 3.5vw;
+   height: 3.5vw;
+   padding: 1.1vw;
    background-color: #F2F2F2;
    border: 1px #F2F2F2 solid;
-   border-radius: 10px 0 0 10px;
+   border-radius: 1.1vw 0 0 1.1vw;
 }
 
 #inputRecherche {
-   height : 45px;
-   width : 200px; 
-   padding : 15px;
-   font-size: 15px;
+   height : 3.5vw;
+   width : 16.5vw; 
+   padding : 1.1vw;
+   font-size: 1.3vw;
    font-weight: 700;
    border: 1px #F2F2F2 solid; 
    overflow: hidden;
 }
 
 #submitRecherche {
-   padding: 0 15px;
+   padding: 0 1.1vw;
    background-color: #0065FC;
    color: white;
-   font-size: 15px;
+   font-size: 1.3vw;
    font-weight: 700;
    border: 1px #0065FC solid;
-   border-radius: 0 10px 10px 0;
+   border-radius: 0 1.1vw 1.1vw 0;
    overflow: hidden;
-   height: 45px;
+   height: 3.5vw;
    cursor: pointer;
 }
 
@@ -162,7 +162,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
  }
 
 #filtres{
-   padding: 20px 0;
+   padding: 2.2vw 0;
    display: flex;
    justify-content: flex-start;
    align-items: center;
@@ -176,60 +176,60 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 .boutonFiltre + label {
    display: flex;
-   height: 45px;
-   Margin-left: 30px;
+   height: 3.5vw;
+   Margin-left: 1.6vw;
    align-items: center;
    border : 2px #F2F2F2 solid;
-   border-radius: 22.5px;
-   font-size: 15px;
+   border-radius: 1.75vw;
+   font-size: 1.3vw;
    font-weight: 700;
-   padding-right: 15px;
+   padding-right: 1.1vw;
    white-space: nowrap ;
 }
 
 .logoFiltre {
-   height: 45px;
-   width: 45px;
-   min-width: 45px; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
-   border-radius: 22.5px;
+   height: 3.5vw;
+   width: 3.5vw;
+   min-width: 3.5vw; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
+   border-radius: 1.75vw;
    background-color: #deebff;
    display: flex;
    align-items: center;
    justify-content: center;
-   margin-right: 15px;
-   margin-left: -2px;
+   margin-right: 1.1vw;
+   margin-left: -2px; /*Compense la bordure*/
 }
 
 
 .logoFiltre img {
-   width: 20px;
-   height: 20px;
+   width: 1.4vw;
+   height: 1.4vw;
    margin: auto;
  }
 
 
 #nbResultats {
-   padding:  0 0 20px 0;
+   padding:  0 0 2.5vw 0;
    display: flex;
    align-items: center;
    white-space: nowrap;
 }
 
 #nbResultats div {
-   min-width: 20px; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
-   width: 20px;
-   height: 20px;
+   min-width: 1.6vw; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
+   width: 1.6vw;
+   height: 1.6vw;
    border: 1px #F2F2F2 solid;
-   border-radius: 10px;
+   border-radius: 0.8VW;
    display: flex;
    align-items: center;
    justify-content: center;
-   margin-right: 10px;
+   margin-right: 1vw;
 }
 
 #nbResultats img{
-   width: 10px;
-   height: 10px;
+   width: 0.8vw;
+   height: 0.8vw;
  }
 
 
@@ -241,19 +241,22 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 /*----------------------------------------------------*/
 
 #hebergPrincipal {
-   margin: 0 15px 0 30px;
+   margin: 0 0.7vw 0 3.5vw;
    background-color: #F2F2F2;
-   border-radius: 15px;
-   max-width: 60%;
-   padding: 10px 30px;
+   border-radius: 1vw;
+   max-width: 61.1vw;
+   padding: 1.6vw;
 }
 
-#listeHebergPrincipal, #hebergPrincipal h2, #hebergPrincipal h3{
-   padding: 10px 0;
+#hebergPrincipal h2 {
+   padding: 1.5vw 1vw 1vw 1vw;
+}
+
+#hebergPrincipal h3 {
+   padding: 1vw 1vw 1.8vw 1vw;
 }
 
 #listeHebergPrincipal {
-   margin: 0 -15px;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -263,24 +266,24 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 .vignetteHeberg { /*conteneur de la carte*/
    border: 3px white solid;
-   border-radius: 10px;
+   border-radius: 1.1vw;
    background-color: white;
    overflow: hidden;
-   width: 27%;
-   height: 150px;
-   margin: 15px;
+   width: 17vw;
+   height: 14vw;
+   margin: 1vw;
 }
 
 .vignetteHeberg__Image {
    width: 100%;
-   height: 66%;
+   height: 57%;
    object-fit: cover;
 }
 
 .vignetteHeberg__Legende { /*conteneur de la légende de la carte*/
    width: 100%;
-   height: 34%;
-   padding: 0 10px;
+   height: 43%;
+   padding: 0 0.8vw;
    display: flex;
    flex-direction: column;
    justify-content: space-around;
@@ -295,12 +298,12 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 }
 
 .vignetteHeberg__Note img {
-    width: 10px;
-    height: 10px; 
+    width: 0.8vw;
+    height: 0.8vw; 
  }
 
 
-/*Passer les unité de largeur en vw*/
+
 
 
 
@@ -323,15 +326,22 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 /*--------------------------------------*/
 
 footer {
-   padding: 30px 30px 50px 30px;
+   padding: 3.5vw 3.5vw 3.8vw 3.5vw;
    background-color: #F2F2F2;
    display: flex;
    justify-content: flex-start;
 }
 
 footer div {
-   padding: 0 200px 0 0;
    list-style: none;
+}
+
+footer div:nth-child(1) {
+   padding-right: 15.6vw;
+}
+
+footer div:nth-child(2) {
+   padding-right: 20.1vw;
 }
 
 footer div a {
