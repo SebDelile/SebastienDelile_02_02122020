@@ -373,16 +373,38 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 
 
+/*-------------------------------------------------*/
+/* Propriété des éléments dans la section activités*/
+/*-------------------------------------------------*/
+
+#activites {
+   margin: 4.5vw 3.5vw;
+
+}
+
+#listeActi {
+   margin-top: 2vw;
+}
 
 
+/*Reprise d'une partie des propriétés des vignettes hébergements*/
+#activites .vignette{
+   width: 20.8vw;
+   border: none;
+   flex-direction: column;
+}
 
 
+#activites .vignette__legende {
+   height: 3.75vw;
+   vertical-align:middle;
+   line-height: 3.75vw
 
+}
 
-
- .vignetteActi__Image {
-    width: 300px; 
- }
+#activites .vignette__image {
+   width: 100%;
+}
 
 
 
