@@ -13,7 +13,9 @@
 
 a {
    text-decoration: none;
+   color: black;
 }
+
 
 body {
    width : fill;
@@ -21,30 +23,41 @@ body {
 }
 
 h1, h2 { /*h1 titre slogan, h2 titre section/article/aside*/
-   font-size: 13px;
+   font-size: 1.6vw;
    font-weight: 700;
 }
 
 h3{ /*titre filtre, afficher plus et titres footer*/
-   font-size: 12px;
+   font-size: 1.3vw;
    font-weight: 700;
    /*padding variable selon section*/
 }
 
 
 h4 { /*titre des cartes*/
-   font-size: 10px;
+   font-size: 1.2vw;
    font-weight: 700;
 }
 
 
 p {
-   font-size: 10px;
-
+   font-size: 1.2vw;
 }
 
+.vignette__legende p {
+   font-size: 1vw;
+}
+
+input {
+   font-size: 1.3vw;
+}
+label {
+   font-size: 1.3vw;
+}
+
+
 li { /*footer*/
-   font-size: 11px;
+   font-size: 0.9em;
    padding: 5px 0 5px 0;
 }
 
@@ -64,8 +77,9 @@ li { /*footer*/
    flex:1; /*Permet d'envoyer le menu et le lien d'inscription à droite de la page*/
 }
 
+
 #logoSite img{
-   width: 100px; /*laissé fixe*/
+   width: 6.6vw;
 }
 
 #menu{
@@ -136,7 +150,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    height : 3.5vw;
    width : 16.5vw; 
    padding : 1.1vw;
-   font-size: 1.3vw;
    font-weight: 700;
    border: 1px #F2F2F2 solid; 
    overflow: hidden;
@@ -146,7 +159,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    padding: 0 1.1vw;
    background-color: #0065FC;
    color: white;
-   font-size: 1.3vw;
    font-weight: 700;
    border: 1px #0065FC solid;
    border-radius: 0 1.1vw 1.1vw 0;
@@ -181,7 +193,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    align-items: center;
    border : 2px #F2F2F2 solid;
    border-radius: 1.75vw;
-   font-size: 1.3vw;
    font-weight: 700;
    padding-right: 1.1vw;
    white-space: nowrap ;
@@ -290,6 +301,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    overflow: hidden;
    display: flex;
    margin: 1vw 0.75vw; /* si marge latérale à 1 aussi, bug d'arrondi fait passé sur 3 lignes, flex spacebetween permet de se mettre au max de marge*/
+   box-shadow: 0 0.2vw 0.8vw #ddd; /*couleur qui donne un effet proche de la maquette*/
 }
 
 #hebergPrincipal .vignette { 
@@ -312,11 +324,11 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 #hebergPrincipal .vignette__image {
    width: 100%;
-   height: 57%;
+   height: 59.5%;
 }
 
 #hebergPop .vignette__image {
-   width: 38.5%;
+   width: 38%;
    height: 100%;
 }
 
@@ -328,12 +340,12 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 #hebergPrincipal .vignette__legende {
    width: 100%;
-   height: 43%;
+   height: 40.5%;
    padding: 0 0.8vw;
 }
 
 #hebergPop .vignette__legende { 
-   width: 61.5%;
+   width: 62%;
    height: 100%;
    padding: 0 0.8vw;
 }
@@ -344,10 +356,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 #hebergPop .vignette__legende h4{ 
    padding: 1.1vw 0;
-}
-
-.vignette__legende p {
- font-size: 9px;
 }
 
 #bottom-aligner{
@@ -416,6 +424,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    position: absolute;
    bottom: 0;
    background-color: white;
+   padding-left: 1.4vw;
 }
 
 #activites .vignette__image {
