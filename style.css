@@ -13,38 +13,51 @@
 
 a {
    text-decoration: none;
+   color: black;
 }
+
 
 body {
    width : fill;
    margin: auto;
 }
 
-h1, h2 {
-   font-size: 13px;
+h1, h2 { /*h1 titre slogan, h2 titre section/article/aside*/
+   font-size: 1.6vw;
    font-weight: 700;
 }
 
-h3{
-   font-size: 12px;
+h3{ /*titre filtre, afficher plus et titres footer*/
+   font-size: 1.3vw;
    font-weight: 700;
-   padding: 5px 0 5px 0;
+   /*padding variable selon section*/
 }
 
 
-h4 {
-   font-size: 10px;
+h4 { /*titre des cartes*/
+   font-size: 1.2vw;
    font-weight: 700;
 }
 
 
 p {
-   font-size: 10px;
-
+   font-size: 1.2vw;
 }
 
-li {
-   font-size: 11px;
+.vignette__legende p {
+   font-size: 1vw;
+}
+
+input {
+   font-size: 1.3vw;
+}
+label {
+   font-size: 1.3vw;
+}
+
+
+li { /*footer*/
+   font-size: 0.9em;
    padding: 5px 0 5px 0;
 }
 
@@ -64,8 +77,9 @@ li {
    flex:1; /*Permet d'envoyer le menu et le lien d'inscription à droite de la page*/
 }
 
+
 #logoSite img{
-   width: 100px; /*laissé fixe*/
+   width: 6.6vw;
 }
 
 #menu{
@@ -136,7 +150,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    height : 3.5vw;
    width : 16.5vw; 
    padding : 1.1vw;
-   font-size: 1.3vw;
    font-weight: 700;
    border: 1px #F2F2F2 solid; 
    overflow: hidden;
@@ -146,7 +159,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    padding: 0 1.1vw;
    background-color: #0065FC;
    color: white;
-   font-size: 1.3vw;
    font-weight: 700;
    border: 1px #0065FC solid;
    border-radius: 0 1.1vw 1.1vw 0;
@@ -181,7 +193,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    align-items: center;
    border : 2px #F2F2F2 solid;
    border-radius: 1.75vw;
-   font-size: 1.3vw;
    font-weight: 700;
    padding-right: 1.1vw;
    white-space: nowrap ;
@@ -240,15 +251,31 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 /* Propriété des éléments dans la section hébergements*/
 /*----------------------------------------------------*/
 
-#hebergPrincipal {
-   margin: 0 0.7vw 0 3.5vw;
+#heberg {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: nowrap;
+}
+
+#hebergPrincipal, #hebergPop {
+   
    background-color: #F2F2F2;
    border-radius: 1vw;
-   max-width: 61.1vw;
    padding: 1.6vw;
 }
 
-#hebergPrincipal h2 {
+#hebergPrincipal {
+   max-width: 61.1vw;
+   margin: 0 1.3vw 0 3.5vw;
+}
+
+#hebergPop {
+   max-width: 29.1vw;
+   margin: 0 3.5vw 0 1.3vw;
+   position: relative; /*Pour le placement du logo en haut à droite*/
+}
+
+#heberg h2 {
    padding: 1.5vw 1vw 1vw 1vw;
 }
 
@@ -267,61 +294,158 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 /*Les balises <a> sont passées en block flex avec taille fixée pour que le lien soit
 cliquable sur la totalité de la surface et que le texte soit centré à l'intérieur*/
 
-.vignetteHeberg { /*conteneur de la carte*/
+.vignette { /*conteneur de la carte*/
    border: 3px white solid;
    border-radius: 1.1vw;
    background-color: white;
    overflow: hidden;
-   width: 17vw;
-   height: 14vw;
-   margin: 1vw;
+   display: flex;
+   margin: 1vw 0.75vw; /* si marge latérale à 1 aussi, bug d'arrondi fait passé sur 3 lignes, flex spacebetween permet de se mettre au max de marge*/
+   box-shadow: 0 0.2vw 0.8vw #ddd; /*couleur qui donne un effet proche de la maquette*/
 }
 
-.vignetteHeberg__Image {
-   width: 100%;
-   height: 57%;
+#hebergPrincipal .vignette { 
+   width: 17vw;
+   height: 14vw;
+   flex-direction: column;
+}
+
+#hebergPop .vignette { 
+   width: 23.5vw;
+   height: 10vw;
+   flex-direction: row;
+
+}
+
+
+.vignette__image {
    object-fit: cover;
 }
 
-.vignetteHeberg__Legende { /*conteneur de la légende de la carte*/
+#hebergPrincipal .vignette__image {
    width: 100%;
-   height: 43%;
-   padding: 0 0.8vw;
+   height: 59.5%;
+}
+
+#hebergPop .vignette__image {
+   width: 38%;
+   height: 100%;
+}
+
+.vignette__legende { /*conteneur de la légende de la carte*/
    display: flex;
    flex-direction: column;
-   justify-content: space-around;
+   justify-content: space-between;
 }
 
-.vignetteHeberg__Legende p {
- font-size: 9px;
+#hebergPrincipal .vignette__legende {
+   width: 100%;
+   height: 40.5%;
+   padding: 0 0.8vw;
 }
 
-.vignetteHeberg__Note { /*l'ensemble des 5 images étoiles*/
-
+#hebergPop .vignette__legende { 
+   width: 62%;
+   height: 100%;
+   padding: 0 0.8vw;
 }
 
-.vignetteHeberg__Note img {
+#hebergPrincipal .vignette__legende h4{ 
+   padding: 0.8vw 0;
+}
+
+#hebergPop .vignette__legende h4{ 
+   padding: 1.1vw 0;
+}
+
+#bottom-aligner{
+   height: 1vw;
+   flex:1;
+}
+
+.vignette__legende__note img {
     width: 0.8vw;
     height: 0.8vw; 
  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
- .vignetteActi__Image {
-    width: 300px; 
+ #hebergPop__logo{
+    width: 1.5vw;
+    position: absolute;
+    top: 3.1vw;
+    right:2.7vw;
  }
 
+
+
+
+
+
+/*-------------------------------------------------*/
+/* Propriété des éléments dans la section activités*/
+/*-------------------------------------------------*/
+
+#activites {
+   margin: 4.5vw 0;
+
+}
+
+#activites h2 {
+   margin: 0 3.5vw;
+}
+
+#listeActi {
+   margin: 2vw 1.9vW; /*en latéral prend en cmpte marge des vignettes pour arriver à 3.5*/
+   height: 34.11vw; /*taille de la plus grande vignette + 2fois la marge*/
+   max-width: 100%; /*normalement 100-2*1.9 = 96.2vw*/
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+}
+
+
+/*Reprise d'une partie des propriétés des vignettes hébergements*/
+#activites .vignette{
+   width: 20.8vw;
+   border: none;
+   flex-direction: column;
+   margin: 1.6vw;
+   height: 30.9vw;
+   position: relative;
+}
+
+
+#activites .vignette__legende {
+   width: 100%;
+   height: 3.75vw;
+   vertical-align:middle;
+   line-height: 3.75vw; /*centrage vertical du text dans sa box*/
+   z-index: 2;
+   position: absolute;
+   bottom: 0;
+   background-color: white;
+   padding-left: 1.4vw;
+}
+
+#activites .vignette__image {
+   height: 100%;
+   border-radius: 0 0 1.5vw 1.5vw; /*Pour éviter d'avoir un pixel qui dépasse en bas des carte sous la légende*/
+}
+
+/*dimensionnement des vignettes pour qu'elles tiennent à 2 par colonne*/
+/*total hauteur colonne à 30.9 dont 2 marges à 1.6 => 27.7*/
+#activites .vignette:nth-child(2){
+   height: 16.3vw;
+}
+#activites .vignette:nth-child(3){
+   height: 11.4vw;
+}
+#activites .vignette:nth-child(5){
+   height: 13.35vw;
+}
+#activites .vignette:nth-child(6){
+   height: 14.35vw;
+}
 
 
 /*--------------------------------------*/
