@@ -45,7 +45,7 @@ h4 { /*titre des cartes*/
 }
 
 
-p {
+p, li, .boutonMenu+label {
    font-size: 1.23vw;
 }
 
@@ -53,16 +53,8 @@ p {
    font-size: 1.1vw;
 }
 
-input {
+input, label {
    font-size: 1.37vw;
-}
-label {
-   font-size: 1.37vw;
-}
-
-
-li { /*footer*/
-   font-size: 1.23vw;
 }
 
 /*--------------------------------------*/
@@ -94,19 +86,23 @@ li { /*footer*/
 /*Les balises <a> sont passées en block flex avec taille fixée pour que le lien soit
 cliquable sur la totalité de la surface et que le texte soit centré à l'intérieur*/
 
-#menu a{
-   width: 10.96vw;
-   height: 8.7vw;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   color: black;
+.boutonMenu {
+   display: none;
 }
 
-#menu a:nth-child(1){
+.boutonMenu + label {
+   display: block;
+   width: 10.96vw;
+   height: 8.7vw;
+   text-align: center;
+   line-height: 8.7vw;
+   cursor: pointer;
+}
+
+.boutonMenu:checked +label{
    color:#0065FC;
    border-top: 0.14vw #0065FC solid;
-   border-bottom: 0.114vw rgba(0, 0, 0, 0) solid; /*pour ne pas décaler l'alignement vertical*/
+   line-height: 8.42vw; /*pour ne pas décaler l'alignement vertical*/
 }
 
 #inscription a{
