@@ -37,13 +37,14 @@
     <div id="barreRecherche">
         <!--logo "me localiser, champ de saisie et bouton "rechercher"-->
         <input type="image" id="logoLocaliser" src="images/icones/map-marker-alt-solid.svg" alt="Localiser">
-        <input type="text" id="inputRecherche" value = "Marseille, France">
+        <input type="text" id="inputRecherche" placeholder = "Marseille, France">
         <input type="submit" id="submitRecherche" value="Rechercher">
         <input type="image" id="logoRecherche" src="images/icones/search-solid.svg" alt="Rechercher">
     </div>
 
     <div id="filtres">
         <h3>Filtres</h3>
+        <!--Le format checkbox permet de rendre les filtres clickables, la checkbox pouvant être cachée-->
         <input class="boutonFiltre" type="checkbox" name="filtresActifs" id="economique">
         <label for="economique">
             <span class="logoFiltre"><img src="images/icones/money-bill-wave-solid.svg" alt="Logo Economique"></span>

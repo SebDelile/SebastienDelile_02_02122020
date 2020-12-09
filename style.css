@@ -159,6 +159,11 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    font-weight: 700;
    border: 0.1vw #F2F2F2 solid; 
    overflow: hidden;
+   
+}
+
+#inputRecherche::placeholder{
+   color : black;
 }
 
 #submitRecherche {
@@ -189,7 +194,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 
 .boutonFiltre {
-   display: none; /*On cache la case de la radio*/
+   display: none; /*On cache la case de la checkbox*/
 }
 
 .boutonFiltre + label {
@@ -202,6 +207,17 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    font-weight: 700;
    padding-right: 1.1vw;
    white-space: nowrap ;
+   cursor: pointer;
+}
+
+.boutonFiltre + label:hover {
+   box-shadow: 0 0 0.5vw #0065FC;
+}
+
+/*Non demandé dans l'énoncé*/
+.boutonFiltre:checked + label {
+   background-color: #deebff;
+   border-color: #deebff;
 }
 
 .logoFiltre {
@@ -214,9 +230,8 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    align-items: center;
    justify-content: center;
    margin-right: 1.1vw;
-   margin-left: -2px; /*Compense la bordure*/
+   margin-left: -0.175vw; /*Compense la bordure*/
 }
-
 
 .logoFiltre img {
    width: 1.4vw;
@@ -294,8 +309,8 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    flex-direction: row;
    justify-content: space-between;
    flex-wrap: wrap;
-   align-content: flex-start;
-   margin: 0 1.7vw;
+   align-content: space-between;
+   margin: 0 2.7vw;
 }
 
 #listeHebergPop {
@@ -322,7 +337,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 #hebergPrincipal .vignette { 
    width: 17vw;
    height: 14vw;
-   margin: 1vw 0.75vw; /* si marge latérale à 1 aussi, bug d'arrondi fait passé sur 3 lignes, flex spacebetween permet de se mettre au max de marge*/
+   margin: 1vw 0; /* marge latérale gérée par flex align content*/
    flex-direction: column;
 }
 
@@ -386,7 +401,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
     margin-right: 0.2vw;
  }
 
-
  #hebergPop__logo{
     width: 1.5vw;
     position: absolute;
@@ -397,15 +411,12 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 
 
-
-
 /*-------------------------------------------------*/
 /* Propriété des éléments dans la section activités*/
 /*-------------------------------------------------*/
 
 #activites {
    margin-bottom: 4.1vw;
-
 }
 
 #activites h2 {
@@ -413,21 +424,23 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 }
 
 #listeActi {
-   margin: 2vw 1.9vW; /*en latéral prend en cmpte marge des vignettes pour arriver à 3.5*/
+   padding: 0 3.5vw;
    height: 34.11vw; /*taille de la plus grande vignette + 2fois la marge*/
-   max-width: 100%; /*normalement 100-2*1.9 = 96.2vw*/
+   width: 100%; /*retrait de l'espace des marges 100-2*1.9 = 96.2vw, on minore pour le bug d'arrondi*/
    display: flex;
    flex-wrap: wrap;
    flex-direction: column;
+   align-content: space-between;
 }
 
 
 /*Reprise d'une partie des propriétés des vignettes hébergements*/
 #activites .vignette{
-   width: 20.8vw;
+   /*4*width+8*margin doit faire 96.2*/
+   width: 20.8vw; /*4 * width = 83.2*/
    border: none;
    flex-direction: column;
-   margin: 1.6vw;
+   margin: 1.6vw 0; /*8 * margin = 12.8 / en latéral la marge est gérée par flex align content*/
    height: 30.9vw;
    position: relative;
 }
