@@ -7,7 +7,7 @@
 * {
    font-family: 'Raleway', sans-serif;
    padding: 0px;
-   margin:0px;
+   margin: 0px;
    box-sizing: border-box;
 }
 
@@ -18,46 +18,51 @@ a {
 
 
 body {
-   width : fill;
-   margin: auto;
+   width : 100%;
+}
+
+body>* {
+   /*permet de retirer la largeur de la scrollbar et maintenir la maquette centrée*/
+   width : 100%;
+   padding: 0 calc(4vw - (100vw - 100%) / 2) 
 }
 
 h1, h2 { /*h1 titre slogan, h2 titre section/article/aside*/
-   font-size: 1.6vw;
+   font-size: 1.64vw;
    font-weight: 700;
 }
 
 h3{ /*titre filtre, afficher plus et titres footer*/
-   font-size: 1.3vw;
+   font-size: 1.37vw;
    font-weight: 700;
    /*padding variable selon section*/
 }
 
 
 h4 { /*titre des cartes*/
-   font-size: 1.2vw;
+   font-size: 1.23vw;
    font-weight: 700;
 }
 
 
 p {
-   font-size: 1.2vw;
+   font-size: 1.23vw;
 }
 
 .vignette__legende p {
-   font-size: 1vw;
+   font-size: 1.1vw;
 }
 
 input {
-   font-size: 1.3vw;
+   font-size: 1.37vw;
 }
 label {
-   font-size: 1.3vw;
+   font-size: 1.37vw;
 }
 
 
 li { /*footer*/
-   font-size: 1.2vw;
+   font-size: 1.23vw;
 }
 
 /*--------------------------------------*/
@@ -65,22 +70,21 @@ li { /*footer*/
 /*--------------------------------------*/
 
 #header {
-   padding: 0 3.5vw;
    display: flex;
    justify-content: space-between;
-   height: 8.8vw;
+   height: 8.7vw;
    align-items: center;
 }
 
 #logoSite {
    flex:1; /*Permet d'envoyer le menu et le lien d'inscription à droite de la page*/
    align-self: flex-start;
-   padding-top: 3.5vw;
+   padding-top: 3.42vw;
 }
 
 
 #logoSite img{
-   width: 6.6vw;
+   width: 6.51vw;
 }
 
 #menu{
@@ -91,8 +95,8 @@ li { /*footer*/
 cliquable sur la totalité de la surface et que le texte soit centré à l'intérieur*/
 
 #menu a{
-   width: 11vw;
-   height: 8.8vw;
+   width: 10.96vw;
+   height: 8.7vw;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -101,16 +105,16 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 #menu a:nth-child(1){
    color:#0065FC;
-   border-top: 0.175vw #0065FC solid;
-   border-bottom: 0.175vw rgba(0, 0, 0, 0) solid; /*pour ne pas décaler l'alignement vertical*/
+   border-top: 0.14vw #0065FC solid;
+   border-bottom: 0.114vw rgba(0, 0, 0, 0) solid; /*pour ne pas décaler l'alignement vertical*/
 }
 
 #inscription a{
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 7.5vw;
-   height: 8.8vw;
+   width: 7.53vw;
+   height: 8.70vw;
    color: #0065FC;
    font-weight: bold;
 }
@@ -122,7 +126,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 
 #recherche {
-   margin: 0 3.5vw;
    white-space: nowrap;
 }
 
@@ -131,33 +134,33 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 }
 
 #slogan h1 {
-   padding-bottom: 0.5vw;
+   padding-bottom: 0.75vw;
 }
 
 #barreRecherche {
-   height: 3.5vw; 
+   height: 3.42vw; 
    display: flex;
    align-items: center;
-   width: 29vw;
-   margin-bottom : 2.1vW;
+   width: 28.77vw;
+   margin-bottom : 2.12vW;
 }
 
 
 #logoLocaliser{
-   width: 3.5vw;
-   height: 3.5vw;
-   padding: 1.1vw;
+   width: 3.56vw;
+   height: 3.42vw;
+   padding: 1.1vw 1.37vw;
    background-color: #F2F2F2;
-   border: 0.1vw #F2F2F2 solid;
-   border-radius: 1.1vw 0 0 1.1vw;
+   border: 0.07vw #F2F2F2 solid;
+   border-radius: 0.82vw 0 0 0.82vw;
 }
 
 #inputRecherche {
-   height : 3.5vw;
-   width : 16.5vw; 
-   padding : 1.1vw;
+   height : 3.42vw;
+   width : 16.03vw; 
+   padding : 1.23vw;
    font-weight: 700;
-   border: 0.1vw #F2F2F2 solid; 
+   border: 0.07vw #F2F2F2 solid; 
    overflow: hidden;
    
 }
@@ -167,14 +170,14 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 }
 
 #submitRecherche {
-   padding: 0 1.1vw;
+   padding: 0 1.23vw;
    background-color: #0065FC;
    color: white;
    font-weight: 700;
-   border: 0.1vw #0065FC solid;
-   border-radius: 0 1.1vw 1.1vw 0;
+   border: 0.07vw #0065FC solid;
+   border-radius: 0 0.82vw 0.82vw 0;
    overflow: hidden;
-   height: 3.5vw;
+   height: 3.42vw;
    cursor: pointer;
 }
 
@@ -185,7 +188,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
  }
 
 #filtres{
-   margin-bottom : 2.3vW;
+   margin-bottom : 2.4vw;
    display: flex;
    justify-content: flex-start;
    align-items: center;
@@ -199,13 +202,13 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 .boutonFiltre + label {
    display: flex;
-   height: 3.5vw;
-   Margin-left: 1.6vw;
+   height: 3.42vw;
+   Margin-left: 1.64vw;
    align-items: center;
-   border : 0.175vw #F2F2F2 solid;
-   border-radius: 1.75vw;
+   border : 0.14vw #F2F2F2 solid;
+   border-radius: 1.71vw;
    font-weight: 700;
-   padding-right: 1.1vw;
+   padding-right: 1.51vw;
    white-space: nowrap ;
    cursor: pointer;
 }
@@ -221,47 +224,47 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 }
 
 .logoFiltre {
-   height: 3.5vw;
-   width: 3.5vw;
-   min-width: 3.5vw; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
-   border-radius: 1.75vw;
+   height: 3.42vw;
+   width: 3.42vw;
+   min-width: 3.42vw; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
+   border-radius: 1.71vw;
    background-color: #deebff;
    display: flex;
    align-items: center;
    justify-content: center;
-   margin-right: 1.1vw;
-   margin-left: -0.175vw; /*Compense la bordure*/
+   margin-right: 0.89vw;
+   margin-left: -0.14vw; /*Compense la bordure*/
 }
 
 .logoFiltre img {
-   width: 1.4vw;
-   height: 1.4vw;
+   width: 1.44vw;
+   height: 1.44vw;
    margin: auto;
  }
 
 
 #nbResultats {
-   margin-bottom: 2.5vw;
+   margin-bottom: 2.53vw;
    display: flex;
    align-items: center;
    white-space: nowrap;
 }
 
 #nbResultats div {
-   min-width: 1.6vw; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
-   width: 1.6vw;
-   height: 1.6vw;
-   border: 0.1vw #F2F2F2 solid;
-   border-radius: 0.8VW;
+   min-width: 1.64vw; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
+   width: 1.64vw;
+   height: 1.64vw;
+   border: 0.07vw #F2F2F2 solid;
+   border-radius: 0.82vw;
    display: flex;
    align-items: center;
    justify-content: center;
-   margin-right: 1vw;
+   margin-right: 0.82vw;
 }
 
 #nbResultats img{
-   width: 0.8vw;
-   height: 0.8vw;
+   width: 0.82vw;
+   height: 0.82vw;
  }
 
 
@@ -276,32 +279,30 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    display: flex;
    justify-content: space-between;
    flex-wrap: nowrap;
-   margin-bottom : 4.1vw;
+   margin-bottom : 4.45vw;
 }
 
 #hebergPrincipal, #hebergPop {
    
    background-color: #F2F2F2;
-   border-radius: 1.1vw;
+   border-radius: 1.10vw;
 }
 
 #hebergPrincipal {
-   width: 61.1vw;
-   margin: 0 1.3vw 0 3.5vw;
+   width: 60.27vw;
 }
 
 #hebergPop {
-   width: 29.1vw;
-   margin: 0 3.5vw 0 1.3vw;
+   width: 28.77vw;
    position: relative; /*Pour le placement du logo en haut à droite*/
 }
 
 #heberg h2 {
-   margin: 3.2vw 2.7vw 0.5vw 2.7vw;
+   margin: 3.22vw 2.88vw 0.55vw 2.88vw;
 }
 
 #hebergPrincipal h3 {
-   margin: 2vw 2.7vw 3.1vw 2.7vw;
+   margin: 2.67vw 2.8vw 3.15vw 2.88vw;
 }
 
 #listeHebergPrincipal {
@@ -310,7 +311,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    justify-content: space-between;
    flex-wrap: wrap;
    align-content: space-between;
-   margin: 0 2.7vw;
+   margin: 0 2.88vw;
 }
 
 #listeHebergPop {
@@ -326,25 +327,25 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 cliquable sur la totalité de la surface et que le texte soit centré à l'intérieur*/
 
 .vignette { /*conteneur de la carte*/
-   border: 0.25vw white solid;
-   border-radius: 1.1vw;
+   border: 0.21vw white solid;
+   border-radius: 1.16vw;
    background-color: white;
    overflow: hidden;
    display: flex;
-   box-shadow: 0 0.2vw 0.8vw #ddd; /*couleur qui donne un effet proche de la maquette*/
+   box-shadow: 0 0.21vw 0.82vw #ddd; /*couleur qui donne un effet proche de la maquette*/
 }
 
 #hebergPrincipal .vignette { 
-   width: 17vw;
-   height: 14vw;
-   margin: 1vw 0; /* marge latérale gérée par flex align content*/
+   width: 16.85vw;
+   height: 13.63vw;
+   margin: 1.05vw 0; /* marge latérale gérée par flex align content*/
    flex-direction: column;
 }
 
 #hebergPop .vignette { 
-   width: 23.5vw;
-   height: 10vw;
-   margin : 1vw 0;
+   width: 23.49vw;
+   height: 9.86vw;
+   margin : 1.05vw 0;
    flex-direction: row;
 
 }
@@ -372,7 +373,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 #hebergPrincipal .vignette__legende {
    width: 100%;
    height: 40.5%;
-   padding :0.7vw 0.8vw 0.45vw 0.8vw; /*il faut prendre en compte l'épaisseur de la bordure de la vignette pour la marge basse*/
+   padding :0.82vw 0.89vw 0.55vw 0.89vw; /*il faut prendre en compte l'épaisseur de la bordure de la vignette pour la marge basse*/
 }
 
 
@@ -380,15 +381,15 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 #hebergPop .vignette__legende { 
    width: 62%;
    height: 100%;
-   padding: 1vw 1.5vw 0.6vw 1.5vw;
+   padding: 1.16vw 1.44vw 0.75vw 1.44vw;
 }
 
 #hebergPop .vignette__legende h4 {
-   margin-bottom: 0.4vw;
+   margin-bottom: 0.41vw;
 }
 
 .vignette__legende__note {
-   height: 0.8vw;
+   height: 0.82vw;
    display: flex;
    flex-direction: row;
    justify-content: start;
@@ -396,16 +397,16 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 }
 
 .vignette__legende__note img {
-    width: 0.8vw;
-    height: 0.8vw; 
-    margin-right: 0.2vw;
+    width: 0.82vw;
+    height: 0.82vw; 
+    margin-right: 0.14vw;
  }
 
  #hebergPop__logo{
-    width: 1.5vw;
+    width: 1.51vw;
     position: absolute;
-    top: 3.1vw;
-    right:2.7vw;
+    top: 3.01vw;
+    right:2.67vw;
  }
 
 
@@ -416,17 +417,12 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 /*-------------------------------------------------*/
 
 #activites {
-   margin-bottom: 4.1vw;
-}
-
-#activites h2 {
-   margin: 0 3.5vw;
+   margin-bottom: 4.18vw;
 }
 
 #listeActi {
-   padding: 0 3.5vw;
-   height: 34.11vw; /*taille de la plus grande vignette + 2fois la marge*/
-   width: 100%; /*retrait de l'espace des marges 100-2*1.9 = 96.2vw, on minore pour le bug d'arrondi*/
+   height: 33.5vw; /*taille de la plus grande vignette + 2fois la marge*/
+   width: 100%; 
    display: flex;
    flex-wrap: wrap;
    flex-direction: column;
@@ -436,46 +432,45 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 /*Reprise d'une partie des propriétés des vignettes hébergements*/
 #activites .vignette{
-   /*4*width+8*margin doit faire 96.2*/
-   width: 20.8vw; /*4 * width = 83.2*/
+   width: 20.68vw;
    border: none;
    flex-direction: column;
-   margin: 1.6vw 0; /*8 * margin = 12.8 / en latéral la marge est gérée par flex align content*/
-   height: 30.9vw;
+   margin: 1.51vw 0; /*en latéral la marge est gérée par flex align content*/
+   height: 30.48vw;
    position: relative;
 }
 
 
 #activites .vignette__legende {
    width: 100%;
-   height: 3.75vw;
-   padding-top: 0.2vw;
-   line-height: 3.55vw; /*height moins padding = centrage quasi-vertical du text dans sa box*/
+   height: 3.77vw;
+   padding-top: 0.21vw;
+   line-height: 3.56vw; /*height moins padding = centrage quasi-vertical du text dans sa box*/
    z-index: 2; /*par dessus la photo*/
    position: absolute;
    bottom: 0;
    background-color: white;
-   padding-left: 1.4vw;
+   padding-left: 1.37vw;
 }
 
 #activites .vignette__image {
    height: 100%;
-   border-radius: 0 0 1.5vw 1.5vw; /*Pour éviter d'avoir un pixel qui dépasse en bas des carte sous la légende*/
+   border-radius: 0 0 1.37vw 1.37vw; /*Pour éviter d'avoir un pixel qui dépasse en bas des carte sous la légende*/
 }
 
 /*dimensionnement des vignettes pour qu'elles tiennent à 2 par colonne*/
-/*total hauteur colonne à 30.9 dont 2 marges à 1.6 => 27.7*/
+/*total hauteur colonne à 30.48 dont 2 marges à 1.51 => 27.46*/
 #activites .vignette:nth-child(2){
-   height: 16.3vw;
+   height: 16.16vw;
 }
 #activites .vignette:nth-child(3){
-   height: 11.4vw;
+   height: 11.30vw;
 }
 #activites .vignette:nth-child(5){
-   height: 13.35vw;
+   height: 13.29vw;
 }
 #activites .vignette:nth-child(6){
-   height: 14.35vw;
+   height: 14.17vw;
 }
 
 
@@ -484,7 +479,8 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 /*--------------------------------------*/
 
 footer {
-   padding: 3.2vw 3.5vw 3.5vw 3.5vw;
+   padding-top: 3.29vw;
+   padding-bottom: 3.42vw;
    background-color: #F2F2F2;
    display: flex;
    justify-content: space-between;
@@ -495,7 +491,7 @@ footer div {
 }
 
 footer h3 {
-   padding-bottom: 1.3vw;
+   padding-bottom: 1.58vw;
 }
 
 footer div ul{
@@ -503,5 +499,5 @@ footer div ul{
 }
 
 footer li {
-   padding-bottom: 0.7vw;
+   padding-bottom: 1.03vw;
 }
