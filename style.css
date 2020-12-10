@@ -2,668 +2,723 @@
 /* Propriétés générales */
 /*----------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap");
 
 * {
-   font-family: 'Raleway', sans-serif;
-   padding: 0px;
-   margin: 0px;
-   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 a {
-   text-decoration: none;
-   color: black;
+  text-decoration: none;
+  color: black;
 }
 
 body {
-   width : 100%;
+  width: 100%;
 }
 
-body>* {
-   /*permet de retirer la largeur de la scrollbar et maintenir la maquette centrée*/
-   width : 100%;
-   padding: 0 calc(4vw - (100vw - 100%) / 2) 
+body > * {
+  /*permet de retirer la largeur de la scrollbar et maintenir la maquette centrée*/
+  width: 100%;
+  padding: 0 calc(4vw - (100vw - 100%) / 2);
 }
 
-h1, h2 { /*h1 titre slogan, h2 titre section/article/aside*/
-   font-size: 1.64vw;
-   font-weight: 700;
+h1,
+h2 {
+  /*h1 titre slogan, h2 titre section/article/aside*/
+  font-size: 1.64vw;
+  font-weight: 700;
 }
 
-h3, input, label{ /*titre filtre, afficher plus, titres footer, boutons*/
-   font-size: 1.37vw;
-   font-weight: 700;
+h3,
+input,
+label {
+  /*titre filtre, afficher plus, titres footer, boutons*/
+  font-size: 1.37vw;
+  font-weight: 700;
 }
 
-h4 { /*titre des cartes*/
-   font-size: 1.23vw;
-   font-weight: 700;
+h4 {
+  /*titre des cartes*/
+  font-size: 1.23vw;
+  font-weight: 700;
 }
 
-p, li {
-   font-size: 1.23vw;
+p,
+li {
+  font-size: 1.23vw;
 }
 
 .vignette__legende p {
-   font-size: 1.1vw;
+  font-size: 1.1vw;
 }
 
-input, label {
-   font-size: 1.37vw;
+input,
+label {
+  font-size: 1.37vw;
 }
-
 
 @media only screen and (max-width: 499px) {
-   body>* {
-      padding: 0 5.6vw /*pas de scrollbar ici*/ 
-   }
-   
-   h1, h2 { /*h1 titre slogan, h2 titre section/article/aside*/
-      font-size: 5.8vw;
-   }
-   
-   h3, h4, input{ /*titre filtre, afficher plus et titres footer*//*titre des cartes*/
-      font-size: 4.6vw;
-   }
-   label {
-      font-size: 4vw;
-   }
-   
-   p, li {
-      font-size: 4vw;
-   }
-   
-   .vignette__legende p {
-      font-size: 3.6vw;
-   }
+  body > * {
+    padding: 0 5.6vw; /*pas de scrollbar ici*/
+  }
+
+  h1,
+  h2 {
+    /*h1 titre slogan, h2 titre section/article/aside*/
+    font-size: 5.8vw;
+  }
+
+  h3,
+  h4,
+  input {
+    /*titre filtre, afficher plus et titres footer*/ /*titre des cartes*/
+    font-size: 4.6vw;
+  }
+  label {
+    font-size: 4vw;
+  }
+
+  p,
+  li {
+    font-size: 4vw;
+  }
+
+  .vignette__legende p {
+    font-size: 3.6vw;
+  }
 }
-
-
 
 /*--------------------------------------*/
 /* Propriété des éléments dans le header*/
 /*--------------------------------------*/
 
 #header {
-   display: flex;
-   justify-content: space-between;
-   height: 8.7vw;
-   align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 8.7vw;
+  align-items: center;
 }
 
 #logoSite {
-   flex:1; /*Permet d'envoyer le menu et le lien d'inscription à droite de la page*/
-   align-self: flex-start;
-   padding-top: 3.42vw;
+  flex: 1; /*Permet d'envoyer le menu et le lien d'inscription à droite de la page*/
+  align-self: flex-start;
+  padding-top: 3.42vw;
 }
 
-#logoSite img{
-   width: 6.51vw;
+#logoSite img {
+  width: 6.51vw;
 }
 
-#menu{
-   display: flex;
+#menu {
+  display: flex;
 }
 
 /*Les balises <a> sont passées en block flex avec taille fixée pour que le lien soit
 cliquable sur la totalité de la surface et que le texte soit centré à l'intérieur*/
 
-#menu a{
-   width: 10.96vw;
-   height: 8.7vw;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+#menu a {
+  width: 10.96vw;
+  height: 8.7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#menu a:nth-child(1){
-   color:#0065FC;
-   border-top: 0.14vw #0065FC solid;
-   border-bottom: 0.114vw rgba(0, 0, 0, 0) solid; /*pour ne pas décaler l'alignement vertical*/
+#menu a:nth-child(1) {
+  color: #0065fc;
+  border-top: 0.14vw #0065fc solid;
+  border-bottom: 0.114vw rgba(0, 0, 0, 0) solid; /*pour ne pas décaler l'alignement vertical*/
 }
 
-#inscription a{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 7.53vw;
-   height: 8.70vw;
-   color: #0065FC;
-   font-weight: bold;
+#inscription a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7.53vw;
+  height: 8.7vw;
+  color: #0065fc;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 499px) {
-   #header {
-      height: 35.46vw;
-      flex-wrap: wrap;
-      align-content: flex-end;
-      margin-bottom: 9.33vw;
-   }
+  #header {
+    height: 35.46vw;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    margin-bottom: 9.33vw;
+  }
 
-   #logoSite {
-      flex-grow:unset;
-      align-self: unset;
-      padding-top: unset;
-   }
-   
-   #logoSite img{
-      width: 25.6vw;
-   }
+  #logoSite {
+    flex-grow: unset;
+    align-self: unset;
+    padding-top: unset;
+  }
 
-   #menu {
-      order: 3;
-      width: 100vw;
-      margin-left: -5.6vw; /*compense le padding du header*/
-   }
+  #logoSite img {
+    width: 25.6vw;
+  }
 
-   #menu a{
-      width: 50vw;
-      height: 16.8vw;
-      border-top: none;
-      border-bottom: 0.8vw #F2F2F2 solid;
-   }
-   
-   #menu a:nth-child(1){
-      color:#0065FC;
-      border-top: none;
-      border-bottom:0.8vw #0065FC solid;
-   }
+  #menu {
+    order: 3;
+    width: 100vw;
+    margin-left: -5.6vw; /*compense le padding du header*/
+  }
 
-   #inscription a{
-      width: unset;
-      height: unset;
-   }
+  #menu a {
+    width: 50vw;
+    height: 16.8vw;
+    border-top: none;
+    border-bottom: 0.8vw #f2f2f2 solid;
+  }
+
+  #menu a:nth-child(1) {
+    color: #0065fc;
+    border-top: none;
+    border-bottom: 0.8vw #0065fc solid;
+  }
+
+  #inscription a {
+    width: unset;
+    height: unset;
+  }
 }
-
 
 /*-------------------------------------------------*/
 /* Propriété des éléments dans la section recherche*/
 /*-------------------------------------------------*/
 
-#recherche{
-   margin-bottom: 2.53vw;
+#recherche {
+  margin-bottom: 2.53vw;
 }
 
 #slogan {
-   margin-bottom : 1.3vW;
+  margin-bottom: 1.3vw;
 }
 
 #slogan h1 {
-   padding-bottom: 0.75vw;
+  padding-bottom: 0.75vw;
 }
 
 #barreRecherche {
-   height: 3.42vw; 
-   display: flex;
-   align-items: center;
-   width: 28.77vw;
-   margin-bottom : 2.12vW;
+  height: 3.42vw;
+  display: flex;
+  align-items: center;
+  width: 28.77vw;
+  margin-bottom: 2.12vw;
 }
 
-
-#logoLocaliser{
-   width: 3.56vw;
-   height: 3.42vw;
-   padding: 1.1vw 1.37vw;
-   background-color: #F2F2F2;
-   border: 0.07vw #F2F2F2 solid;
-   border-radius: 0.82vw 0 0 0.82vw;
+#logoLocaliser {
+  width: 3.56vw;
+  height: 3.42vw;
+  padding: 1.1vw 1.37vw;
+  background-color: #f2f2f2;
+  border: 0.07vw #f2f2f2 solid;
+  border-radius: 0.82vw 0 0 0.82vw;
 }
 
 #inputRecherche {
-   height : 3.42vw;
-   width : 16.03vw; 
-   padding : 1.23vw;
-   border: 0.07vw #F2F2F2 solid; 
-   overflow: hidden;
-   
+  height: 3.42vw;
+  width: 16.03vw;
+  padding: 1.23vw;
+  border: 0.07vw #f2f2f2 solid;
+  overflow: hidden;
 }
 
-#inputRecherche::placeholder{
-   color : black;
+#inputRecherche::placeholder {
+  color: black;
 }
 
 #submitRecherche {
-   padding: 0 1.23vw;
-   background-color: #0065FC;
-   color: white;
-   border: 0.07vw #0065FC solid;
-   border-radius: 0 0.82vw 0.82vw 0;
-   overflow: hidden;
-   height: 3.42vw;
-   cursor: pointer;
+  padding: 0 1.23vw;
+  background-color: #0065fc;
+  color: white;
+  border: 0.07vw #0065fc solid;
+  border-radius: 0 0.82vw 0.82vw 0;
+  overflow: hidden;
+  height: 3.42vw;
+  cursor: pointer;
 }
 
-#logoRecherche{
-   display: none; /*ne sert que pour la version mobile*/
- }
-
-#filtres{
-   margin-bottom : 2.4vw;
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
-   
+#logoRecherche {
+  display: none; /*ne sert que pour la version mobile*/
 }
 
+#filtres {
+  margin-bottom: 2.4vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 .boutonFiltre {
-   display: none; /*On cache la case de la checkbox*/
+  display: none; /*On cache la case de la checkbox*/
 }
 
 .boutonFiltre + label {
-   display: flex;
-   height: 3.42vw;
-   Margin-left: 1.64vw;
-   align-items: center;
-   border : 0.14vw #F2F2F2 solid;
-   border-radius: 1.71vw;
-   padding-right: 1.51vw;
-   white-space: nowrap ;
-   cursor: pointer;
+  display: flex;
+  height: 3.42vw;
+  margin-left: 1.64vw;
+  align-items: center;
+  border: 0.14vw #f2f2f2 solid;
+  border-radius: 1.71vw;
+  padding-right: 1.51vw;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 .boutonFiltre + label:hover {
-   box-shadow: 0 0 0.5vw #0065FC;
+  box-shadow: 0 0 0.5vw #0065fc;
 }
 
 /*Non demandé dans l'énoncé*/
 .boutonFiltre:checked + label {
-   background-color: #deebff;
-   border-color: #deebff;
+  background-color: #deebff;
+  border-color: #deebff;
 }
 
 .logoFiltre {
-   height: 3.42vw;
-   width: 3.42vw;
-   border-radius: 1.71vw;
-   background-color: #deebff;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-right: 0.89vw;
-   margin-left: -0.14vw; /*Compense la bordure*/
+  height: 3.42vw;
+  width: 3.42vw;
+  border-radius: 1.71vw;
+  background-color: #deebff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.89vw;
+  margin-left: -0.14vw; /*Compense la bordure*/
 }
 
 .logoFiltre img {
-   width: 1.44vw;
-   height: 1.44vw;
-   margin: auto;
- }
-
+  width: 1.44vw;
+  height: 1.44vw;
+  margin: auto;
+}
 
 #nbResultats {
-   display: flex;
-   align-items: center;
-
+  display: flex;
+  align-items: center;
 }
 
 #nbResultats div {
-   width: 1.64vw;
-   height: 1.64vw;
-   border: 0.07vw #F2F2F2 solid;
-   border-radius: 0.82vw;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-right: 0.82vw;
+  width: 1.64vw;
+  height: 1.64vw;
+  border: 0.07vw #f2f2f2 solid;
+  border-radius: 0.82vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.82vw;
 }
 
-#nbResultats img{
-   width: 0.82vw;
-   height: 0.82vw;
- }
+#nbResultats img {
+  width: 0.82vw;
+  height: 0.82vw;
+}
 
+@media only screen and (max-width: 499px) {
+  #recherche {
+    margin-bottom: 9.6vw;
+  }
 
- @media only screen and (max-width: 499px) {
-   #recherche{
-      margin-bottom: 9.6vw;
-   }
+  #slogan {
+    margin-bottom: 9.07vw;
+  }
 
-   #slogan {
-      margin-bottom : 9.07vw;
-   }
-   
-   #slogan h1 {
-      padding-bottom: 4vw;
-   }
-   
-   #barreRecherche {
-      height: 13.6vw; 
-      display: flex;
-      align-items: center;
-      width: 88.8vw;
-      margin-bottom : 10vw;
-   }
-   
-   
-   #logoLocaliser{
-      width: 13.86vw;
-      height: 13.6vw;
-      padding: 4.53vw 5.07vw;
-      border-width: 0.27vw;
-      border-radius: 3.47vw 0 0 3.47vw;
-   }
-   
-   #inputRecherche {
-      height : 13.6vw;
-      width : 65.3vw; 
-      padding : 4.8vw;
-      border-width: 0.27vw;
-   }
-   
-   #submitRecherche {
-      display: none;
-   }
-   
-   #logoRecherche{
-      display: unset;
-      width: 13.6vw;
-      height: 13.6vw;
-      padding: 4.53vw;
-      background-color: #0065FC;
-      border: 0.27vw #0065FC solid;
-      border-radius: 3.47vw;
-      margin-left: -3.47vw; /*pour recouvrir l'input*/
-    }
+  #slogan h1 {
+    padding-bottom: 4vw;
+  }
 
+  #barreRecherche {
+    height: 13.6vw;
+    display: flex;
+    align-items: center;
+    width: 88.8vw;
+    margin-bottom: 10vw;
+  }
 
+  #logoLocaliser {
+    width: 13.86vw;
+    height: 13.6vw;
+    padding: 4.53vw 5.07vw;
+    border-width: 0.27vw;
+    border-radius: 3.47vw 0 0 3.47vw;
+  }
 
-    #filtres{
-      margin-bottom : 4.8vw; /*tient compte de la marge des boutons filtres*/
-      align-items: flex-start;
-      flex-wrap: wrap;
-   }
+  #inputRecherche {
+    height: 13.6vw;
+    width: 65.3vw;
+    padding: 4.8vw;
+    border-width: 0.27vw;
+  }
 
-   #filtres h3 {
-      width: 88.8vw;
-      margin-bottom: 4vw;
-   }
+  #submitRecherche {
+    display: none;
+  }
 
-   .boutonFiltre + label {
-      height: 13.33vw;
-      Margin-left: unset;
-      border-width : 0.53vw;
-      border-radius: 6.67vw;
-      padding-right: 4.8vw;
-      margin-bottom: 3.47vw;
-      margin-right: 2.93vw;
-   }
-   
-   .logoFiltre {
-      height: 13.33vw;
-      width: 13.33vw;
-      border-radius: 6.67vw;
-      margin-right: 3.2vw;
-      margin-left: -0.53vw; /*Compense la bordure*/
-   }
-   
-   .logoFiltre img {
-      width: 5.6vw;
-      height: 5.6vw;
-      margin: auto;
-    }
+  #logoRecherche {
+    display: unset;
+    width: 13.6vw;
+    height: 13.6vw;
+    padding: 4.53vw;
+    background-color: #0065fc;
+    border: 0.27vw #0065fc solid;
+    border-radius: 3.47vw;
+    margin-left: -3.47vw; /*pour recouvrir l'input*/
+  }
 
+  #filtres {
+    margin-bottom: 4.8vw; /*tient compte de la marge des boutons filtres*/
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 
-    #nbResultats {
-      justify-content: space-between;
-      align-items: flex-start;
-   }
-   
-   #nbResultats div {
-      width: 6.4vw;
-      height: 6.4vw;
-      border-width: 0.27vw;
-      border-radius: 3.2vw;
-      margin-right: unset;
-   }
-   
-   #nbResultats img{
-      width: 3.2vw;
-      height: 3.2vw;
-    }
+  #filtres h3 {
+    width: 88.8vw;
+    margin-bottom: 4vw;
+  }
 
-    #nbResultats p {
-       width: 78.67vw;
-       margin-top: 0.8vw; /*Pour aligner sur le logo i*/
-    }
+  .boutonFiltre + label {
+    height: 13.33vw;
+    margin-left: unset;
+    border-width: 0.53vw;
+    border-radius: 6.67vw;
+    padding-right: 4.8vw;
+    margin-bottom: 3.47vw;
+    margin-right: 2.93vw;
+  }
 
+  .logoFiltre {
+    height: 13.33vw;
+    width: 13.33vw;
+    border-radius: 6.67vw;
+    margin-right: 3.2vw;
+    margin-left: -0.53vw; /*Compense la bordure*/
+  }
 
+  .logoFiltre img {
+    width: 5.6vw;
+    height: 5.6vw;
+    margin: auto;
+  }
 
-   #heberg {
-      flex-direction: column;
-   }
- }
+  #nbResultats {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
+  #nbResultats div {
+    width: 6.4vw;
+    height: 6.4vw;
+    border-width: 0.27vw;
+    border-radius: 3.2vw;
+    margin-right: unset;
+  }
+
+  #nbResultats img {
+    width: 3.2vw;
+    height: 3.2vw;
+  }
+
+  #nbResultats p {
+    width: 78.67vw;
+    margin-top: 0.8vw; /*Pour aligner sur le logo i*/
+  }
+
+  #heberg {
+    flex-direction: column;
+  }
+}
 
 /*----------------------------------------------------*/
 /* Propriété des éléments dans la section hébergements*/
 /*----------------------------------------------------*/
 
 #heberg {
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: nowrap;
-   margin-bottom : 4.45vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 4.45vw;
 }
 
-#hebergPrincipal, #hebergPop {
-   
-   background-color: #F2F2F2;
-   border-radius: 1.10vw;
+#hebergPrincipal,
+#hebergPop {
+  background-color: #f2f2f2;
+  border-radius: 1.1vw;
 }
 
 #hebergPrincipal {
-   width: 60.27vw;
+  width: 60.27vw;
 }
 
 #hebergPop {
-   width: 28.77vw;
-   position: relative; /*Pour le placement du logo en haut à droite*/
+  width: 28.77vw;
+  position: relative; /*Pour le placement du logo en haut à droite*/
 }
 
 #heberg h2 {
-   margin: 3.22vw 2.88vw 0.55vw 2.88vw;
+  margin: 3.22vw 2.88vw 0.55vw 2.88vw;
 }
 
 #hebergPrincipal h3 {
-   margin: 2.67vw 2.8vw 3.15vw 2.88vw;
+  margin: 2.67vw 2.8vw 3.15vw 2.88vw;
 }
 
 #listeHebergPrincipal {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   flex-wrap: wrap;
-   align-content: space-between;
-   margin: 0 2.88vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin: 0 2.88vw;
 }
 
 #listeHebergPop {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   flex-wrap: nowrap;
-   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
 }
-
 
 /*Les balises <a> sont passées en block flex avec taille fixée pour que le lien soit
 cliquable sur la totalité de la surface et que le texte soit centré à l'intérieur*/
 
-.vignette { /*conteneur de la carte*/
-   border: 0.21vw white solid;
-   border-radius: 1.16vw;
-   background-color: white;
-   overflow: hidden;
-   display: flex;
-   box-shadow: 0 0.21vw 0.82vw #ddd; /*couleur qui donne un effet proche de la maquette*/
+.vignette {
+  /*conteneur de la carte*/
+  border: 0.21vw white solid;
+  border-radius: 1.16vw;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 0.21vw 0.82vw #ddd; /*couleur qui donne un effet proche de la maquette*/
 }
 
-#hebergPrincipal .vignette { 
-   width: 16.85vw;
-   height: 13.63vw;
-   margin: 1.05vw 0; /* marge latérale gérée par flex align content*/
-   flex-direction: column;
+#hebergPrincipal .vignette {
+  width: 16.85vw;
+  height: 13.63vw;
+  margin: 1.05vw 0; /* marge latérale gérée par flex align content*/
+  flex-direction: column;
 }
 
-#hebergPop .vignette { 
-   width: 23.49vw;
-   height: 9.86vw;
-   margin : 1.05vw 0;
-   flex-direction: row;
-
+#hebergPop .vignette {
+  width: 23.49vw;
+  height: 9.86vw;
+  margin: 1.05vw 0;
+  flex-direction: row;
 }
 
 .vignette__image {
-   object-fit: cover;
+  object-fit: cover;
 }
 
 #hebergPrincipal .vignette__image {
-   width: 100%;
-   height: 59.5%;
+  width: 100%;
+  height: 59.5%;
 }
 
 #hebergPop .vignette__image {
-   width: 38%;
-   height: 100%;
+  width: 38%;
+  height: 100%;
 }
 
-.vignette__legende { /*conteneur de la légende de la carte*/
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+.vignette__legende {
+  /*conteneur de la légende de la carte*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #hebergPrincipal .vignette__legende {
-   width: 100%;
-   height: 40.5%;
-   padding :0.82vw 0.89vw 0.55vw 0.89vw; /*il faut prendre en compte l'épaisseur de la bordure de la vignette pour la marge basse*/
+  width: 100%;
+  height: 40.5%;
+  padding: 0.82vw 0.89vw 0.55vw 0.89vw; /*il faut prendre en compte l'épaisseur de la bordure de la vignette pour la marge basse*/
 }
 
-
-
-#hebergPop .vignette__legende { 
-   width: 62%;
-   height: 100%;
-   padding: 1.16vw 1.44vw 0.75vw 1.44vw;
+#hebergPop .vignette__legende {
+  width: 62%;
+  height: 100%;
+  padding: 1.16vw 1.44vw 0.75vw 1.44vw;
 }
 
 #hebergPop .vignette__legende h4 {
-   margin-bottom: 0.41vw;
+  margin-bottom: 0.41vw;
 }
 
 .vignette__legende__note {
-   height: 0.82vw;
-   display: flex;
-   flex-direction: row;
-   justify-content: start;
-   align-items: flex-start;
+  height: 0.82vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
 }
 
 .vignette__legende__note img {
-    width: 0.82vw;
-    height: 0.82vw; 
-    margin-right: 0.14vw;
- }
+  width: 0.82vw;
+  height: 0.82vw;
+  margin-right: 0.14vw;
+}
 
- #hebergPop__logo{
-    width: 1.51vw;
-    position: absolute;
-    top: 3.01vw;
-    right:2.67vw;
- }
-
-
-
+#hebergPop__logo {
+  width: 1.51vw;
+  position: absolute;
+  top: 3.01vw;
+  right: 2.67vw;
+}
 
 /*-------------------------------------------------*/
 /* Propriété des éléments dans la section activités*/
 /*-------------------------------------------------*/
 
 #activites {
-   margin-bottom: 4.18vw;
+  margin-bottom: 4.18vw;
 }
 
 #listeActi {
-   height: 33.5vw; /*taille de la plus grande vignette + 2fois la marge*/
-   width: 100%; 
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: column;
-   align-content: space-between;
+  height: 33.5vw; /*taille de la plus grande vignette + 2fois la marge*/
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
 }
-
 
 /*Reprise d'une partie des propriétés des vignettes hébergements*/
-#activites .vignette{
-   width: 20.68vw;
-   border: none;
-   flex-direction: column;
-   margin: 1.51vw 0; /*en latéral la marge est gérée par flex align content*/
-   height: 30.48vw;
-   position: relative;
+#activites .vignette {
+  width: 20.68vw;
+  border: none;
+  flex-direction: column;
+  margin: 1.51vw 0; /*en latéral la marge est gérée par flex align content*/
+  height: 30.48vw;
+  position: relative;
 }
 
-
 #activites .vignette__legende {
-   width: 100%;
-   height: 3.77vw;
-   padding-top: 0.21vw;
-   line-height: 3.56vw; /*height moins padding = centrage quasi-vertical du text dans sa box*/
-   z-index: 2; /*par dessus la photo*/
-   position: absolute;
-   bottom: 0;
-   background-color: white;
-   padding-left: 1.37vw;
+  width: 100%;
+  height: 3.77vw;
+  padding-top: 0.21vw;
+  line-height: 3.56vw; /*height moins padding = centrage quasi-vertical du text dans sa box*/
+  z-index: 2; /*par dessus la photo*/
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  padding-left: 1.37vw;
 }
 
 #activites .vignette__image {
-   height: 100%;
-   border-radius: 0 0 1.37vw 1.37vw; /*Pour éviter d'avoir un pixel qui dépasse en bas des carte sous la légende*/
+  height: 100%;
+  border-radius: 0 0 1.37vw 1.37vw; /*Pour éviter d'avoir un pixel qui dépasse en bas des carte sous la légende*/
 }
 
 /*dimensionnement des vignettes pour qu'elles tiennent à 2 par colonne*/
 /*total hauteur colonne à 30.48 dont 2 marges à 1.51 => 27.46*/
-#activites .vignette:nth-child(2){
-   height: 16.16vw;
+#activites .vignette:nth-child(2) {
+  height: 16.16vw;
 }
-#activites .vignette:nth-child(3){
-   height: 11.30vw;
+#activites .vignette:nth-child(3) {
+  height: 11.3vw;
 }
-#activites .vignette:nth-child(5){
-   height: 13.29vw;
+#activites .vignette:nth-child(5) {
+  height: 13.29vw;
 }
-#activites .vignette:nth-child(6){
-   height: 14.17vw;
+#activites .vignette:nth-child(6) {
+  height: 14.17vw;
 }
 
+@media only screen and (max-width: 499px) {
+  #activites {
+    margin-bottom: 13.06vw;
+  }
+
+  #activites h2 {
+    margin-bottom: 4vw;
+  }
+
+  #listeActi {
+    height: unset;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+  }
+
+  /*Reprise d'une partie des propriétés des vignettes hébergements*/
+  #activites .vignette {
+    width: 100%;
+    margin: 3.2vw 0;
+    height: 50.67vw;
+  }
+
+  #activites .vignette__legende {
+    height: 14.93vw;
+    padding-top: 0.8vw;
+    line-height: 14.13vw; /*height moins padding = centrage quasi-vertical du text dans sa box*/
+    padding-left: 5.33vw;
+  }
+
+  #activites .vignette__image {
+    height: 100%;
+    border-radius: 0 0 10vw 10vw; /*Pour éviter d'avoir un pixel qui dépasse en bas des carte sous la légende*/
+  }
+
+  /*dimensionnement des vignettes pour qu'elles tiennent à 2 par colonne*/
+  /*total hauteur colonne à 30.48 dont 2 marges à 1.51 => 27.46*/
+  #activites .vignette:nth-child(2),
+  #activites .vignette:nth-child(3),
+  #activites .vignette:nth-child(5),
+  #activites .vignette:nth-child(6) {
+    height: 50.67vw;
+  }
+}
 
 /*--------------------------------------*/
 /* Propriété des éléments dans le footer*/
 /*--------------------------------------*/
 
 footer {
-   padding-top: 3.29vw;
-   padding-bottom: 3.42vw;
-   background-color: #F2F2F2;
-   display: flex;
-   justify-content: space-between;
+  padding-top: 3.29vw;
+  padding-bottom: 3.42vw;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer div {
-   width: 33.33%;
+  width: 33.33%;
 }
 
 footer h3 {
-   padding-bottom: 1.58vw;
+  padding-bottom: 1.58vw;
 }
 
-footer div ul{
-   list-style: none;
+footer div ul {
+  list-style: none;
 }
 
 footer li {
-   padding-bottom: 1.03vw;
+  padding-bottom: 1.03vw;
+}
+
+@media only screen and (max-width: 499px) {
+  footer {
+    padding-top: 12.8vw;
+    padding-bottom: none; /*la marge basse des 3 ul fera l'affaire*/
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  footer div {
+    width: 100%;
+    margin-bottom: 12vw;
+    padding-left: 2.13vw;
+  }
+
+  footer h3 {
+    padding-bottom: 4vw;
+  }
+
+  footer li {
+    padding-bottom: 3vw;
+  }
 }
