@@ -16,7 +16,6 @@ a {
    color: black;
 }
 
-
 body {
    width : 100%;
 }
@@ -32,20 +31,17 @@ h1, h2 { /*h1 titre slogan, h2 titre section/article/aside*/
    font-weight: 700;
 }
 
-h3{ /*titre filtre, afficher plus et titres footer*/
+h3, input, label{ /*titre filtre, afficher plus, titres footer, boutons*/
    font-size: 1.37vw;
    font-weight: 700;
-   /*padding variable selon section*/
 }
-
 
 h4 { /*titre des cartes*/
    font-size: 1.23vw;
    font-weight: 700;
 }
 
-
-p {
+p, li {
    font-size: 1.23vw;
 }
 
@@ -53,17 +49,37 @@ p {
    font-size: 1.1vw;
 }
 
-input {
-   font-size: 1.37vw;
-}
-label {
+input, label {
    font-size: 1.37vw;
 }
 
 
-li { /*footer*/
-   font-size: 1.23vw;
+@media only screen and (max-width: 499px) {
+   body>* {
+      padding: 0 5.6vw /*pas de scrollbar ici*/ 
+   }
+   
+   h1, h2 { /*h1 titre slogan, h2 titre section/article/aside*/
+      font-size: 5.8vw;
+   }
+   
+   h3, h4, input{ /*titre filtre, afficher plus et titres footer*//*titre des cartes*/
+      font-size: 4.6vw;
+   }
+   label {
+      font-size: 4vw;
+   }
+   
+   p, li {
+      font-size: 4vw;
+   }
+   
+   .vignette__legende p {
+      font-size: 3.6vw;
+   }
 }
+
+
 
 /*--------------------------------------*/
 /* Propriété des éléments dans le header*/
@@ -82,7 +98,6 @@ li { /*footer*/
    padding-top: 3.42vw;
 }
 
-
 #logoSite img{
    width: 6.51vw;
 }
@@ -100,7 +115,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    display: flex;
    justify-content: center;
    align-items: center;
-   color: black;
 }
 
 #menu a:nth-child(1){
@@ -119,14 +133,56 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    font-weight: bold;
 }
 
+@media only screen and (max-width: 499px) {
+   #header {
+      height: 35.46vw;
+      flex-wrap: wrap;
+      align-content: flex-end;
+      margin-bottom: 9.33vw;
+   }
+
+   #logoSite {
+      flex-grow:unset;
+      align-self: unset;
+      padding-top: unset;
+   }
+   
+   #logoSite img{
+      width: 25.6vw;
+   }
+
+   #menu {
+      order: 3;
+      width: 100vw;
+      margin-left: -5.6vw; /*compense le padding du header*/
+   }
+
+   #menu a{
+      width: 50vw;
+      height: 16.8vw;
+      border-top: none;
+      border-bottom: 0.8vw #F2F2F2 solid;
+   }
+   
+   #menu a:nth-child(1){
+      color:#0065FC;
+      border-top: none;
+      border-bottom:0.8vw #0065FC solid;
+   }
+
+   #inscription a{
+      width: unset;
+      height: unset;
+   }
+}
+
 
 /*-------------------------------------------------*/
 /* Propriété des éléments dans la section recherche*/
 /*-------------------------------------------------*/
 
-
-#recherche {
-   white-space: nowrap;
+#recherche{
+   margin-bottom: 2.53vw;
 }
 
 #slogan {
@@ -159,7 +215,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    height : 3.42vw;
    width : 16.03vw; 
    padding : 1.23vw;
-   font-weight: 700;
    border: 0.07vw #F2F2F2 solid; 
    overflow: hidden;
    
@@ -173,7 +228,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    padding: 0 1.23vw;
    background-color: #0065FC;
    color: white;
-   font-weight: 700;
    border: 0.07vw #0065FC solid;
    border-radius: 0 0.82vw 0.82vw 0;
    overflow: hidden;
@@ -183,8 +237,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 #logoRecherche{
    display: none; /*ne sert que pour la version mobile*/
-   width: 20px;
-   height: 20px; 
  }
 
 #filtres{
@@ -207,7 +259,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
    align-items: center;
    border : 0.14vw #F2F2F2 solid;
    border-radius: 1.71vw;
-   font-weight: 700;
    padding-right: 1.51vw;
    white-space: nowrap ;
    cursor: pointer;
@@ -226,7 +277,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 .logoFiltre {
    height: 3.42vw;
    width: 3.42vw;
-   min-width: 3.42vw; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
    border-radius: 1.71vw;
    background-color: #deebff;
    display: flex;
@@ -244,14 +294,12 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 
 #nbResultats {
-   margin-bottom: 2.53vw;
    display: flex;
    align-items: center;
-   white-space: nowrap;
+
 }
 
 #nbResultats div {
-   min-width: 1.64vw; /*sinon en zoomant la bulle s'applatit (cause flexbox)*/
    width: 1.64vw;
    height: 1.64vw;
    border: 0.07vw #F2F2F2 solid;
@@ -268,7 +316,125 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
  }
 
 
+ @media only screen and (max-width: 499px) {
+   #recherche{
+      margin-bottom: 9.6vw;
+   }
 
+   #slogan {
+      margin-bottom : 9.07vw;
+   }
+   
+   #slogan h1 {
+      padding-bottom: 4vw;
+   }
+   
+   #barreRecherche {
+      height: 13.6vw; 
+      display: flex;
+      align-items: center;
+      width: 88.8vw;
+      margin-bottom : 10vw;
+   }
+   
+   
+   #logoLocaliser{
+      width: 13.86vw;
+      height: 13.6vw;
+      padding: 4.53vw 5.07vw;
+      border-width: 0.27vw;
+      border-radius: 3.47vw 0 0 3.47vw;
+   }
+   
+   #inputRecherche {
+      height : 13.6vw;
+      width : 65.3vw; 
+      padding : 4.8vw;
+      border-width: 0.27vw;
+   }
+   
+   #submitRecherche {
+      display: none;
+   }
+   
+   #logoRecherche{
+      display: unset;
+      width: 13.6vw;
+      height: 13.6vw;
+      padding: 4.53vw;
+      background-color: #0065FC;
+      border: 0.27vw #0065FC solid;
+      border-radius: 3.47vw;
+      margin-left: -3.47vw; /*pour recouvrir l'input*/
+    }
+
+
+
+    #filtres{
+      margin-bottom : 4.8vw; /*tient compte de la marge des boutons filtres*/
+      align-items: flex-start;
+      flex-wrap: wrap;
+   }
+
+   #filtres h3 {
+      width: 88.8vw;
+      margin-bottom: 4vw;
+   }
+
+   .boutonFiltre + label {
+      height: 13.33vw;
+      Margin-left: unset;
+      border-width : 0.53vw;
+      border-radius: 6.67vw;
+      padding-right: 4.8vw;
+      margin-bottom: 3.47vw;
+      margin-right: 2.93vw;
+   }
+   
+   .logoFiltre {
+      height: 13.33vw;
+      width: 13.33vw;
+      border-radius: 6.67vw;
+      margin-right: 3.2vw;
+      margin-left: -0.53vw; /*Compense la bordure*/
+   }
+   
+   .logoFiltre img {
+      width: 5.6vw;
+      height: 5.6vw;
+      margin: auto;
+    }
+
+
+    #nbResultats {
+      justify-content: space-between;
+      align-items: flex-start;
+   }
+   
+   #nbResultats div {
+      width: 6.4vw;
+      height: 6.4vw;
+      border-width: 0.27vw;
+      border-radius: 3.2vw;
+      margin-right: unset;
+   }
+   
+   #nbResultats img{
+      width: 3.2vw;
+      height: 3.2vw;
+    }
+
+    #nbResultats p {
+       width: 78.67vw;
+       margin-top: 0.8vw; /*Pour aligner sur le logo i*/
+    }
+
+
+
+   #heberg {
+      flex-direction: column;
+   }
+ }
 
 
 /*----------------------------------------------------*/
