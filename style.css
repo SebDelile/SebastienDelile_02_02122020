@@ -427,10 +427,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
     width: 78.67vw;
     margin-top: 0.8vw; /*Pour aligner sur le logo i*/
   }
-
-  #heberg {
-    flex-direction: column;
-  }
 }
 
 /*----------------------------------------------------*/
@@ -479,7 +475,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 #listeHebergPop {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: nowrap;
   align-items: center;
 }
@@ -550,6 +546,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 .vignette__legende__note {
   height: 0.82vw;
+  margin-top: 0.15vw;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -567,6 +564,101 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   position: absolute;
   top: 3.01vw;
   right: 2.67vw;
+}
+
+@media only screen and (max-width: 499px) {
+  #heberg {
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    margin-bottom: 8vw;
+  }
+  
+  #hebergPrincipal,
+  #hebergPop {
+    border-radius: none;
+    width: 100%;
+  }
+  
+  #hebergPrincipal {
+    background-color: unset;
+  }
+
+  #hebergPop {
+    margin-bottom: 10.9vw;
+    margin-left: -5.6vw; /*compense le padding général pour que le background color couvre toute la largeur*/
+    margin-right: -5.6vw;
+    width: 100vw;
+    padding : 10vw 5.6vw 8.5vw 5.6vw;/*on remet le padding général à gauche et droite*/
+  }
+  
+  #heberg h2 {
+    margin: 0 0 3.5vw 0;
+  }
+  
+  #hebergPrincipal h3 {
+    margin: 7.5vw 0 3.2vw 0;
+  }
+
+  #listeHebergPrincipal {
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-content: center;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .vignette {
+    border-width: 1.33vw;
+    border-radius: 4.53vw;
+    box-shadow: 0 0.8vw 3.2vw #ddd;
+  }
+  
+  #hebergPrincipal .vignette {
+    width: 100%;
+    height: 53.33vw;
+    margin: 1.6vw 0;
+  }
+  
+  #hebergPop .vignette {
+    width: 100%;
+    height: 38.4vw;
+    margin: 1.3vw 0;
+  }
+  
+  #hebergPrincipal .vignette__legende {
+    padding: 2.93vw 2.93vw 1.46vw 2.93vw; /*il faut prendre en compte l'épaisseur de la bordure de la vignette pour la marge basse*/
+  }
+  
+  #hebergPop .vignette__legende {
+    width: 62%;
+    height: 100%;
+    padding: 3.73vw 5.6vw 2.4vw 5.6vw;
+  }
+  
+  #hebergPop .vignette__legende h4 {
+    margin-bottom: 1.87vw;
+  }
+  
+  .vignette__legende__note {
+    height: 3.2vw;
+    margin-top: 0.5vw;
+  }
+  
+  .vignette__legende__note img {
+    width: 3.2vw;
+    height: 3.2vw;
+    margin-right: 0.53vw;
+  }
+  
+  #hebergPop__logo {
+    width: 5.6vw;
+    top: 10.93vw;
+    right: 5.6vw;
+  }
+
+
 }
 
 /*-------------------------------------------------*/
@@ -630,7 +722,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 @media only screen and (max-width: 499px) {
   #activites {
-    margin-bottom: 13.06vw;
+    margin-bottom: 10vw;
   }
 
   #activites h2 {
@@ -702,7 +794,7 @@ footer li {
 
 @media only screen and (max-width: 499px) {
   footer {
-    padding-top: 12.8vw;
+    padding-top: 6.8vw;
     padding-bottom: none; /*la marge basse des 3 ul fera l'affaire*/
     flex-direction: column;
     justify-content: flex-start;
@@ -710,7 +802,7 @@ footer li {
 
   footer div {
     width: 100%;
-    margin-bottom: 12vw;
+    margin: 6vw 0;
     padding-left: 2.13vw;
   }
 
