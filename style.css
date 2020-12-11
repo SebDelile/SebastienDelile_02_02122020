@@ -56,9 +56,37 @@ li {
   font-size: 1.1vw;
 }
 
-input,
-label {
-  font-size: 1.37vw;
+
+@media only screen and (min-width:500px) and (max-width: 799px) {
+  h1,
+  h2 {
+    /*h1 titre slogan, h2 titre section/article/aside*/
+    font-size: 2.4vw;
+    font-weight: 700;
+  }
+  
+  h3,
+  input,
+  label {
+    /*titre filtre, afficher plus, titres footer, boutons*/
+    font-size: 2vw;
+    font-weight: 700;
+  }
+  
+  h4 {
+    /*titre des cartes*/
+    font-size: 1.8vw;
+    font-weight: 700;
+  }
+  
+  p,
+  li {
+    font-size: 1.8vw;
+  }
+  
+  .vignette__legende p {
+    font-size: 1.6vw;
+  }
 }
 
 @media only screen and (max-width: 499px) {
@@ -131,7 +159,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 #menu a:nth-child(1) {
   color: #0065fc;
   border-top: 0.14vw #0065fc solid;
-  border-bottom: 0.114vw rgba(0, 0, 0, 0) solid; /*pour ne pas décaler l'alignement vertical*/
+  border-bottom: 0.14vw rgba(0, 0, 0, 0) solid; /*pour ne pas décaler l'alignement vertical*/
 }
 
 #inscription a {
@@ -142,6 +170,35 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   height: 8.7vw;
   color: #0065fc;
   font-weight: bold;
+}
+
+@media only screen and (min-width:500px) and (max-width: 799px) {
+  #header {
+    height: 12.7vw;
+  }
+  
+  #logoSite {
+    padding-top: 5vw;
+  }
+  
+  #logoSite img {
+    width: 9.5vw;
+  }
+  
+  #menu a {
+    width: 16vw;
+    height: 12.7vw;
+  }
+  
+  #menu a:nth-child(1) {
+    border-width: 0.2vw;
+  }
+
+  #inscription a {
+    width: 11vw;
+    height: 12.7vw;
+  }
+
 }
 
 @media only screen and (max-width: 499px) {
@@ -319,6 +376,98 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   height: 0.82vw;
 }
 
+@media only screen and (min-width:500px) and (max-width: 799px) {
+  #recherche {
+    margin-bottom: 3.7vw;
+  }
+  
+  #slogan {
+    margin-bottom: 1.9vw;
+  }
+  
+  #slogan h1 {
+    padding-bottom: 1.1vw;
+  }
+  
+  #barreRecherche {
+    height: 5vw;
+    width: 42vw;
+    margin-bottom: 3.1vw;
+  }
+  
+  #logoLocaliser {
+    width: 5.2vw;
+    height: 5vw;
+    padding: 1.6vw 2vw;
+    border-width: 0.1vw;
+    border-radius: 1.2vw 0 0 1.2vw;
+  }
+  
+  #inputRecherche {
+    height: 5vw;
+    width: 23.4vw;
+    padding: 1.8vw;
+    border-width: 0.1vw;
+  }
+  
+  #submitRecherche {
+    padding: 0 1.8vw;
+    border-width: 0.1vw;
+    border-radius: 0 1.2vw 1.2vw 0;
+    height: 5vw;
+  }
+  
+  #filtres {
+    margin-bottom: 3.5vw;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  #filtres h3 {
+    width: 92vw; /*prend toute la largeur, force à aller à la ligne*/
+    margin-bottom: 1vw;
+  }
+  
+  .boutonFiltre + label {
+    height: 5vw;
+    margin-left: 0vw;
+    margin-right: 2.4vw;
+    border-width: 0.2vw;
+    border-radius: 2.5vw;
+    padding-right: 2.5vw;
+  }
+  
+  .boutonFiltre + label:last-child {
+    margin-right: 0; /* pour que ça rentre sur une ligne*/
+  }
+
+  .logoFiltre {
+    height: 5vw;
+    width: 5vw;
+    border-radius: 2.5vw;
+    margin-right: 1.3vw;
+    margin-left: -0.2vw; /*Compense la bordure*/
+  }
+  
+  .logoFiltre img {
+    width: 2.1vw;
+    height: 2.1vw;
+  }
+  
+  #nbResultats div {
+    width: 2.4vw;
+    height: 2.4vw;
+    border-width: 0.1vw;
+    border-radius: 1.2vw;
+    margin-right: 1.2vw;
+  }
+  
+  #nbResultats img {
+    width: 1.2vw;
+    height: 1.2vw;
+  }
+
+}
+
 @media only screen and (max-width: 499px) {
   #recherche {
     margin-bottom: 9.6vw;
@@ -377,7 +526,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   }
 
   #filtres h3 {
-    width: 88.8vw;
+    width: 88.8vw; /*prend toute la largeur, force à aller à la ligne*/
     margin-bottom: 4vw;
   }
 
@@ -460,7 +609,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 }
 
 #hebergPrincipal h3 {
-  margin: 2.67vw 2.8vw 3.15vw 2.88vw;
+  margin: 2.67vw 2.88vw 3.15vw 2.88vw;
 }
 
 #listeHebergPrincipal {
@@ -564,6 +713,105 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   position: absolute;
   top: 3.01vw;
   right: 2.67vw;
+}
+
+@media only screen and (min-width:500px) and (max-width: 799px) {
+  #heberg {
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    margin-bottom: 6.5vw;
+  }
+  
+  #hebergPrincipal,
+  #hebergPop {
+    background-color: #f2f2f2;
+    border-radius: 1.16vw;
+  }
+  
+  #hebergPrincipal {
+    width: 100%;
+  }
+  
+  #hebergPop {
+    width: 100%;
+    position: relative; /*Pour le placement du logo en haut à droite*/
+    margin-bottom: 3.7vw;
+    padding-bottom: 2vw;
+  }
+  
+  #heberg h2 {
+    margin: 4.7vw 4.2vw 0.8vw 4.2vw;
+  }
+  
+  #hebergPrincipal h3 {
+    margin: 2vw 4.2vw 4vw 4.2vw;
+  }
+  
+  #listeHebergPrincipal {
+    margin: 0 4.2vw;
+  }
+  
+  #listeHebergPop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    margin: 0 4.2vw;
+  }
+  
+  /*Les balises <a> sont passées en block flex avec taille fixée pour que le lien soit
+  cliquable sur la totalité de la surface et que le texte soit centré à l'intérieur*/
+  
+  .vignette {
+    /*conteneur de la carte*/
+    border-width: 0.3vw;
+    border-radius: 1.7vw;
+    box-shadow: 0 0.3vw 1.2vw #ddd; /*couleur qui donne un effet proche de la maquette*/
+  }
+  
+  #hebergPrincipal .vignette {
+    width: 25.2vw;
+    height: 19.9vw;
+    margin: 1.5vw 0; 
+  }
+  
+  #hebergPop .vignette {
+    width: 25.2vw; /*idem heberg principal*/
+    height: 14.4vw; /*on garde la même hauteur que version desktop*/
+    margin: 1.5vw 0;
+  }
+  
+  #hebergPrincipal .vignette__legende {
+    padding: 1.2vw 1.3vw 0.8vw 1.3vw; /*il faut prendre en compte l'épaisseur de la bordure de la vignette pour la marge basse*/
+  }
+  
+  #hebergPop .vignette__legende {
+    width: 62%;
+    height: 100%;
+    padding: 0.7vw 1.2vw 0.7vw 1.2vw; /*modifié pour que le texte rentre mieux*/
+  }
+  
+  #hebergPop .vignette__legende h4 {
+    margin-bottom: 0.2vw;
+  }
+  
+  .vignette__legende__note {
+    height: 1.2vw;
+    margin-top: 0.4vw;
+  }
+  
+  .vignette__legende__note img {
+    width: 1.2vw;
+    height: 1.2vw;
+    margin-right: 0.2vw;
+  }
+  
+  #hebergPop__logo {
+    width: 2.2vw;
+    top: 4.4vw;
+    right: 3.9vw;
+  }
 }
 
 @media only screen and (max-width: 499px) {
@@ -720,6 +968,55 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   height: 14.17vw;
 }
 
+@media only screen and (min-width:500px) and (max-width: 799px) {
+  #activites {
+    margin-bottom: 3.1vw;
+  }
+  
+  #listeActi {
+    height: 53.3vw; /*free (total carte + 4 marge*/)
+  }
+  
+  #activites .vignette {
+    width: 27.3vw; 
+    margin: 2.2vw 0;
+    height: 44.5vw; /*taille max, sera réduite 1 par 1 (disposition 3 colonne 2 lignes)*/
+  }
+  
+  #activites .vignette__legende {
+    height: 5.5vw;
+    padding-top: 0.3vw;
+    line-height: 5.2vw; /*height moins padding = centrage quasi-vertical du text dans sa box*/
+    padding-left: 2vw;/*free*/
+  }
+  
+  #activites .vignette__image {
+    border-radius: 0 0 2vw 2vw; /*Pour éviter d'avoir un pixel qui dépasse en bas des carte sous la légende*/
+  }
+  
+  /*dimensionnement des vignettes pour qu'elles tiennent à 2 par colonne*/
+  /*total hauteur colonne à 44.5 (+ 4 marges à 2.2 => 53.3)*/
+  /*legende hauteur de 5.5*/
+  #activites .vignette:nth-child(1) {
+    height: 28vw;
+  }
+  #activites .vignette:nth-child(2) {
+    height:16.5vw;
+  }
+  #activites .vignette:nth-child(3) {
+    height: 17vw;
+  }
+  #activites .vignette:nth-child(4) {
+    height: 27.5vw;
+  }
+  #activites .vignette:nth-child(5) {
+    height: 23vw;
+  }
+  #activites .vignette:nth-child(6) {
+    height: 21.5vw;
+  }
+}
+
 @media only screen and (max-width: 499px) {
   #activites {
     margin-bottom: 10vw;
@@ -790,6 +1087,25 @@ footer div ul {
 
 footer li {
   padding-bottom: 1.03vw;
+}
+
+@media only screen and (min-width:500px) and (max-width: 799px) {
+  footer {
+    padding-top: 4.8vw;
+    padding-bottom: 5vw;
+  }
+  
+  footer div {
+    width: 27.3vw; /*même largeur que les vignettes*/
+  }
+  
+  footer h3 {
+    padding-bottom: 2.3vw;
+  }
+  
+  footer li {
+    padding-bottom: 1.5vw;
+  }
 }
 
 @media only screen and (max-width: 499px) {
