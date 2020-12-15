@@ -91,7 +91,7 @@ li {
 
 @media only screen and (max-width: 649px) {
   body > * {
-    padding: 0 5.6vw; /*pas de scrollbar ici*/
+    padding: 0 calc(5.6vw - (100vw - 100%) / 2); /*pas de scrollbar sur mobile mais navigateur web avec petite fenetre oui*/
   }
 
   h1,
@@ -207,12 +207,14 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
     flex-wrap: wrap;
     align-content: flex-end;
     margin-bottom: 9.33vw;
+    padding: 0; /*car besoin de pleine largeur sur le menu*/
   }
 
   #logoSite {
     flex-grow: unset;
     align-self: unset;
     padding-top: unset;
+    padding-left: calc(5.6vw - (100vw - 100%) / 2); /*compense l'absence du padding général dans le header*/
   }
 
   #logoSite img {
@@ -221,8 +223,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
   #menu {
     order: 3;
-    width: 100vw;
-    margin-left: -5.6vw; /*compense le padding du header*/
+    width: 100%; /* % plutot que vw au cas où il y a une scrollbar, header prend 100% de la largeur (pas de padding)*/
   }
 
   #menu a {
@@ -237,6 +238,10 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
     border-top: none;
     border-bottom: 0.8vw #0065fc solid;
   }
+
+#inscription {
+  padding-right: calc(5.6vw - (100vw - 100%) / 2); /*compense l'absence du padding général dans le header*/
+}
 
   #inscription a {
     width: unset;
@@ -331,7 +336,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   box-shadow: 0 0 0.5vw #0065fc;
 }
 
-/*Non demandé dans l'énoncé*/
+/*Non demandé dans l'énoncé mais justifie l'utilisation de checkboxes pour les boutons filtres*/
 .boutonFiltre:checked + label {
   background-color: #deebff;
   border-color: #deebff;
@@ -824,6 +829,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
     flex-direction: column-reverse;
     flex-wrap: nowrap;
     margin-bottom: 8vw;
+    padding: 0; /*car besoin de pleine largeur sur le aside*/
   }
   
   #hebergPrincipal,
@@ -834,14 +840,12 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   
   #hebergPrincipal {
     background-color: unset;
+    padding: 0 calc(5.6vw - (100vw - 100%) / 2); /*compense l'absence du padding général dans la section*/
   }
 
   #hebergPop {
     margin-bottom: 10.9vw;
-    margin-left: -5.6vw; /*compense le padding général pour que le background color couvre toute la largeur*/
-    margin-right: -5.6vw;
-    width: 100vw;
-    padding : 10vw 5.6vw 8.5vw 5.6vw;/*on remet le padding général à gauche et droite*/
+    padding: 10vw calc(5.6vw - (100vw - 100%) / 2); /*compense l'absence du padding général dans la section*/
   }
   
   #heberg h2 {
