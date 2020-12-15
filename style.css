@@ -278,7 +278,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   height: 3.42vw;
   padding: 1.1vw 1.37vw;
   background-color: #f2f2f2;
-  border: 0.07vw #f2f2f2 solid;
   border-radius: 0.82vw 0 0 0.82vw;
 }
 
@@ -298,7 +297,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   padding: 0 1.23vw;
   background-color: #0065fc;
   color: white;
-  border: 0.07vw #0065fc solid;
+  border: unset;
   border-radius: 0 0.82vw 0.82vw 0;
   overflow: hidden;
   height: 3.42vw;
@@ -334,12 +333,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 .boutonFiltre + label:hover {
   box-shadow: 0 0 0.5vw #0065fc;
-}
-
-/*Non demandé dans l'énoncé mais justifie l'utilisation de checkboxes pour les boutons filtres*/
-.boutonFiltre:checked + label {
-  background-color: #deebff;
-  border-color: #deebff;
 }
 
 .logoFiltre {
@@ -519,7 +512,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
     height: 13.6vw;
     padding: 4.53vw;
     background-color: #0065fc;
-    border: 0.27vw #0065fc solid;
     border-radius: 3.47vw;
     margin-left: -3.47vw; /*pour recouvrir l'input*/
   }
@@ -643,7 +635,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 .vignette {
   /*conteneur de la carte*/
-  border: 0.21vw white solid;
   border-radius: 1.16vw;
   background-color: white;
   overflow: hidden;
@@ -666,17 +657,20 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 }
 
 .vignette__image {
+  border: 0.21vw white solid;
   object-fit: cover;
 }
 
 #hebergPrincipal .vignette__image {
   width: 100%;
   height: 59.5%;
+  border-radius: 1.16vw 1.16vw 0 0;
 }
 
 #hebergPop .vignette__image {
   width: 38%;
   height: 100%;
+  border-radius: 1.16vw 0 0 1.16vw;
 }
 
 .vignette__legende {
@@ -689,13 +683,13 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 #hebergPrincipal .vignette__legende {
   width: 100%;
   height: 40.5%;
-  padding: 0.82vw 0.89vw 0.55vw 0.89vw; /*il faut prendre en compte l'épaisseur de la bordure de la vignette pour la marge basse*/
+  padding: 0.82vw 1.1vw 0.76vw 1.1vw;
 }
 
 #hebergPop .vignette__legende {
   width: 62%;
   height: 100%;
-  padding: 1.16vw 1.44vw 0.75vw 1.44vw;
+  padding: 1.37vw 1.44vw 0.96vw 1.44vw;
 }
 
 #hebergPop .vignette__legende h4 {
@@ -774,17 +768,28 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   
   .vignette {
     /*conteneur de la carte*/
-    border-width: 0.3vw;
     border-radius: 1.7vw;
     box-shadow: 0 0.3vw 1.2vw #ddd; /*couleur qui donne un effet proche de la maquette*/
   }
   
+  .vignette__image {
+    border-width: 0.3vw;   
+  }
+  
+  #hebergPrincipal .vignette__image {
+    border-radius: 1.7vw 1.7vw 0 0;
+  }
+
+  #hebergPop .vignette__image {
+    border-radius: 1.7vw 0 0 1.7vw;
+  }
+
   #hebergPrincipal .vignette {
     width: 25.2vw;
     height: 19.9vw;
     margin: 1.5vw 0; 
   }
-  
+
   #hebergPop .vignette {
     width: 25.2vw; /*idem heberg principal*/
     height: 14.4vw; /*on garde la même hauteur que version desktop*/
@@ -792,13 +797,13 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   }
   
   #hebergPrincipal .vignette__legende {
-    padding: 1.2vw 1.3vw 0.8vw 1.3vw; /*il faut prendre en compte l'épaisseur de la bordure de la vignette pour la marge basse*/
+    padding: 1.2vw 1.6vw 1.1vw 1.6vw; /*il faut prendre en compte l'épaisseur de la bordure de la vignette pour la marge basse*/
   }
   
   #hebergPop .vignette__legende {
     width: 62%;
     height: 100%;
-    padding: 0.7vw 1.2vw 0.7vw 1.2vw; /*modifié pour que le texte rentre mieux*/
+    padding: 1vw 1.2vw; /*modifié pour que le texte rentre mieux*/
   }
   
   #hebergPop .vignette__legende h4 {
@@ -834,7 +839,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   
   #hebergPrincipal,
   #hebergPop {
-    border-radius: none;
+    border-radius: unset;
     width: 100%;
   }
   
@@ -866,7 +871,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   }
   
   .vignette {
-    border-width: 1.33vw;
     border-radius: 4.53vw;
     box-shadow: 0 0.8vw 3.2vw #ddd;
   }
@@ -882,15 +886,27 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
     height: 38.4vw;
     margin: 1.3vw 0;
   }
-  
+
+  .vignette__image {
+    border-width: 1.33vw;
+  }
+
+  #hebergPrincipal .vignette__image {
+    border-radius: 4.53vw 4.53vw 0 0;
+  }
+
+  #hebergPop .vignette__image {
+    border-radius: 4.53vw 0 0 4.53vw;
+  }
+
   #hebergPrincipal .vignette__legende {
-    padding: 2.93vw 2.93vw 1.46vw 2.93vw; /*il faut prendre en compte l'épaisseur de la bordure de la vignette pour la marge basse*/
+    padding: 2.93vw 4.26vw 2.8vw 4.26vw;
   }
   
   #hebergPop .vignette__legende {
     width: 62%;
     height: 100%;
-    padding: 3.73vw 5.6vw 2.4vw 5.6vw;
+    padding: 3.73vw 5.6vw 3.73vw 5.6vw;
   }
   
   #hebergPop .vignette__legende h4 {
@@ -937,7 +953,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 /*Reprise d'une partie des propriétés des vignettes hébergements*/
 #activites .vignette {
   width: 20.68vw;
-  border: none;
   flex-direction: column;
   margin: 1.51vw 0; /*en latéral la marge est gérée par flex align content*/
   height: 30.48vw;
@@ -959,6 +974,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 #activites .vignette__image {
   height: 100%;
   border-radius: 0 0 1.37vw 1.37vw; /*Pour éviter d'avoir un pixel qui dépasse en bas des carte sous la légende*/
+  border: unset;
 }
 
 /*dimensionnement des vignettes pour qu'elles tiennent à 2 par colonne*/
@@ -982,7 +998,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   }
   
   #listeActi {
-    height: 53.3vw; /*free (total carte + 4 marge*/)
+    height: 53.3vw; /*free (total carte + 4 marge)*/
   }
   
   #activites .vignette {
@@ -1119,7 +1135,7 @@ footer li {
 @media only screen and (max-width: 649px) {
   footer {
     padding-top: 6.8vw;
-    padding-bottom: none; /*la marge basse des 3 ul fera l'affaire*/
+    padding-bottom: 0; /*la marge basse des 3 ul fera l'affaire*/
     flex-direction: column;
     justify-content: flex-start;
   }
