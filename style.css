@@ -124,7 +124,7 @@ li {
 /* Propriété des éléments dans le header*/
 /*--------------------------------------*/
 
-#header {
+header {
   display: flex;
   justify-content: space-between;
   height: 8.7vw;
@@ -173,7 +173,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 }
 
 @media only screen and (min-width: 650px) and (max-width: 999px) {
-  #header {
+  header {
     height: 12.7vw;
   }
   
@@ -202,7 +202,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 }
 
 @media only screen and (max-width: 649px) {
-  #header {
+  header {
     height: 35.46vw;
     flex-wrap: wrap;
     align-content: flex-end;
