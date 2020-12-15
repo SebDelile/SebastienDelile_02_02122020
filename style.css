@@ -278,7 +278,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   height: 3.42vw;
   padding: 1.1vw 1.37vw;
   background-color: #f2f2f2;
-  border: 0.07vw #f2f2f2 solid;
   border-radius: 0.82vw 0 0 0.82vw;
 }
 
@@ -298,7 +297,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   padding: 0 1.23vw;
   background-color: #0065fc;
   color: white;
-  border: 0.07vw #0065fc solid;
+  border: unset;
   border-radius: 0 0.82vw 0.82vw 0;
   overflow: hidden;
   height: 3.42vw;
@@ -334,12 +333,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
 
 .boutonFiltre + label:hover {
   box-shadow: 0 0 0.5vw #0065fc;
-}
-
-/*Non demandé dans l'énoncé mais justifie l'utilisation de checkboxes pour les boutons filtres*/
-.boutonFiltre:checked + label {
-  background-color: #deebff;
-  border-color: #deebff;
 }
 
 .logoFiltre {
@@ -519,7 +512,6 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
     height: 13.6vw;
     padding: 4.53vw;
     background-color: #0065fc;
-    border: 0.27vw #0065fc solid;
     border-radius: 3.47vw;
     margin-left: -3.47vw; /*pour recouvrir l'input*/
   }
@@ -834,7 +826,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   
   #hebergPrincipal,
   #hebergPop {
-    border-radius: none;
+    border-radius: unset;
     width: 100%;
   }
   
@@ -982,7 +974,7 @@ cliquable sur la totalité de la surface et que le texte soit centré à l'inté
   }
   
   #listeActi {
-    height: 53.3vw; /*free (total carte + 4 marge*/)
+    height: 53.3vw; /*free (total carte + 4 marge)*/
   }
   
   #activites .vignette {
@@ -1119,7 +1111,7 @@ footer li {
 @media only screen and (max-width: 649px) {
   footer {
     padding-top: 6.8vw;
-    padding-bottom: none; /*la marge basse des 3 ul fera l'affaire*/
+    padding-bottom: 0; /*la marge basse des 3 ul fera l'affaire*/
     flex-direction: column;
     justify-content: flex-start;
   }
